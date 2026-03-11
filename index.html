@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 组织洞察 · Org Intelligence</title>
+  <style>
+    :root {
+      --bg: #f0f4f8;
+      --bg-card: #ffffff;
+      --bg-header: #0f172a;
+      --text-primary: #1e293b;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --border: #e2e8f0;
+      --accent: #4f46e5;
+      --accent-light: #eef2ff;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+      --shadow-lg: 0 12px 28px rgba(0,0,0,0.12);
+      --radius: 14px;
+      --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font); background: var(--bg); color: var(--text-primary); min-height: 100vh; }
+
+    /* ── Header ── */
+    .header { background: var(--bg-header); color: white; padding: 0 24px; }
+    .header-inner {
+      max-width: 1320px; margin: 0 auto; padding: 18px 0;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .logo { display: flex; align-items: center; gap: 14px; }
+    .logo-icon {
+      width: 44px; height: 44px;
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px;
+      flex-shrink: 0;
+    }
+    .logo-text h1 { font-size: 19px; font-weight: 800; letter-spacing: -0.4px; }
+    .logo-text p { font-size: 12px; color: #94a3b8; margin-top: 3px; }
+    .header-right { display: flex; align-items: center; gap: 14px; }
+    .live-badge {
+      background: rgba(16,185,129,0.15); color: #34d399;
+      padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;
+      display: flex; align-items: center; gap: 5px;
+    }
+    .live-dot { width: 7px; height: 7px; background: #34d399; border-radius: 50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.35} }
+    .header-meta { font-size: 12px; color: #64748b; }
+
+    /* ── Stats Bar ── */
+    .stats-bar { background: var(--bg-card); border-bottom: 1px solid var(--border); }
+    .stats-inner {
+      max-width: 1320px; margin: 0 auto; padding: 14px 24px;
+      display: flex; gap: 28px; align-items: center; flex-wrap: wrap;
+    }
+    .stat { display: flex; align-items: baseline; gap: 6px; }
+    .stat-num { font-size: 22px; font-weight: 800; color: var(--accent); }
+    .stat-lbl { font-size: 13px; color: var(--text-secondary); }
+    .stat-div { width: 1px; height: 26px; background: var(--border); }
+
+    /* ── Main ── */
+    .main { max-width: 1320px; margin: 0 auto; padding: 28px 24px 60px; }
+
+    /* ── Filters ── */
+    .filter-bar {
+      background: var(--bg-card); border-radius: var(--radius); border: 1px solid var(--border);
+      padding: 14px 18px; margin-bottom: 24px;
+      display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
+      box-shadow: var(--shadow-sm);
+    }
+    .flabel { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-muted); white-space: nowrap; }
+    .fgroup { display: flex; gap: 6px; flex-wrap: wrap; }
+    .fbtn {
+      padding: 6px 15px; border-radius: 20px; border: 1.5px solid var(--border);
+      background: white; color: var(--text-secondary); font-size: 13px; font-weight: 500;
+      cursor: pointer; transition: all 0.14s; font-family: var(--font);
+    }
+    .fbtn:hover { border-color: var(--accent); color: var(--accent); }
+    .fbtn.active { background: var(--accent); border-color: var(--accent); color: white; font-weight: 600; }
+    .fsep { width: 1px; height: 28px; background: var(--border); flex-shrink: 0; }
+    .search-wrap { flex: 1; min-width: 160px; max-width: 280px; position: relative; }
+    .search-wrap input {
+      width: 100%; padding: 7px 14px 7px 34px; border: 1.5px solid var(--border);
+      border-radius: 20px; font-size: 13px; font-family: var(--font); color: var(--text-primary);
+      outline: none; transition: border-color 0.14s; background: #f8fafc;
+    }
+    .search-wrap input:focus { border-color: var(--accent); background: white; }
+    .search-ico { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); font-size: 14px; color: var(--text-muted); pointer-events: none; }
+
+    /* ── Grid ── */
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(390px, 1fr)); gap: 20px; }
+
+    /* ── Card ── */
+    .card {
+      background: var(--bg-card); border-radius: var(--radius); border: 1px solid var(--border);
+      padding: 22px; box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s, transform 0.2s;
+      display: flex; flex-direction: column; gap: 14px;
+      animation: fadeUp 0.35s ease both;
+    }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+    .card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+
+    .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+    .source-pill {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.4px; white-space: nowrap;
+    }
+    .s-mckinsey  { background:#fef3c7; color:#92400e; }
+    .s-bcg       { background:#dbeafe; color:#1e40af; }
+    .s-gartner   { background:#f3e8ff; color:#6b21a8; }
+    .s-bersin    { background:#dcfce7; color:#166534; }
+    .s-mercer    { background:#ffe4e6; color:#9f1239; }
+    .s-deloitte  { background:#e0f2fe; color:#0c4a6e; }
+    .s-pwc       { background:#fef9c3; color:#713f12; }
+    .s-kornferry { background:#fce7f3; color:#831843; }
+    .s-fortune   { background:#fff7ed; color:#9a3412; }
+    .s-wef       { background:#f0fdf4; color:#14532d; }
+    .s-other     { background:#f1f5f9; color:#475569; }
+
+    .card-date { font-size: 12px; color: var(--text-muted); white-space: nowrap; padding-top: 3px; }
+    .card-title { font-size: 15px; font-weight: 700; line-height: 1.48; color: var(--text-primary); }
+    .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .tag { padding: 3px 9px; border-radius: 5px; font-size: 11px; font-weight: 600; }
+    .t-org  { background:#fef3c7; color:#b45309; }
+    .t-hr   { background:#dcfce7; color:#15803d; }
+    .t-both { background:#ede9fe; color:#6d28d9; }
+    .t-en   { background:#f1f5f9; color:#64748b; }
+    .t-zh   { background:#f0f9ff; color:#0369a1; }
+
+    .insights-head { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-muted); margin-bottom: 9px; }
+    .insights { list-style: none; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+    .insight { display: flex; gap: 9px; font-size: 13px; line-height: 1.55; color: var(--text-secondary); }
+    .ins-dot { color: var(--accent); font-size: 18px; line-height: 1.1; flex-shrink: 0; }
+
+    .card-footer { display: flex; justify-content: flex-end; padding-top: 10px; border-top: 1px solid var(--border); }
+    .read-btn {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none;
+      padding: 6px 14px; border-radius: 8px; background: var(--accent-light);
+      transition: background 0.14s, gap 0.14s;
+    }
+    .read-btn:hover { background: #e0e7ff; gap: 9px; }
+
+    /* ── Empty ── */
+    .empty { grid-column: 1/-1; text-align: center; padding: 80px 0; color: var(--text-muted); }
+    .empty h3 { font-size: 22px; margin-bottom: 8px; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center; padding: 20px 24px; border-top: 1px solid var(--border);
+      font-size: 12px; color: var(--text-muted); line-height: 1.8;
+    }
+
+    /* ── Responsive ── */
+    @media(max-width: 768px) {
+      .grid { grid-template-columns: 1fr; }
+      .header-inner { flex-direction: column; align-items: flex-start; }
+      .stats-inner { gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-icon">🧠</div>
+      <div class="logo-text">
+        <h1>AI 组织洞察 · Org Intelligence</h1>
+        <p>追踪顶级机构对 AI 组织冲击 &amp; HR 转型的最前沿研究</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="live-badge">
+        <div class="live-dot"></div>
+        <span id="last-updated">每日自动更新</span>
+      </div>
+      <div class="header-meta" id="source-count"></div>
+    </div>
+  </div>
+</header>
+
+<!-- Stats Bar -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat"><span class="stat-num" id="s-total">—</span><span class="stat-lbl">篇洞察</span></div>
+    <div class="stat-div"></div>
+    <div class="stat"><span class="stat-num" id="s-src">—</span><span class="stat-lbl">机构来源</span></div>
+    <div class="stat-div"></div>
+    <div class="stat"><span class="stat-num" id="s-org">—</span><span class="stat-lbl">组织变革</span></div>
+    <div class="stat-div"></div>
+    <div class="stat"><span class="stat-num" id="s-hr">—</span><span class="stat-lbl">HR 转型</span></div>
+  </div>
+</div>
+
+<!-- Main -->
+<main class="main">
+  <!-- Filter bar -->
+  <div class="filter-bar">
+    <span class="flabel">主题</span>
+    <div class="fgroup" id="cat-group">
+      <button class="fbtn active" data-cat="all">全部 All</button>
+      <button class="fbtn" data-cat="org-impact">🏢 AI 组织冲击</button>
+      <button class="fbtn" data-cat="hr-transform">👥 HR 转型</button>
+    </div>
+    <div class="fsep"></div>
+    <span class="flabel">来源</span>
+    <div class="fgroup" id="src-group">
+      <button class="fbtn active" data-src="all">全部</button>
+    </div>
+    <div class="fsep"></div>
+    <div class="search-wrap">
+      <span class="search-ico">🔍</span>
+      <input type="text" id="q" placeholder="搜索关键词...">
+    </div>
+  </div>
+
+  <!-- Card grid -->
+  <div class="grid" id="grid"></div>
+</main>
+
+<footer>
+  <div>数据来源：McKinsey &middot; BCG &middot; Gartner &middot; Josh Bersin &middot; Mercer &middot; Deloitte &middot; Fortune &middot; WEF 等顶级机构</div>
+  <div>由 Claude AI 每日自动搜索并提炼核心观点 &middot; 仅供研究参考</div>
+</footer>
+
+<script src="data.js"></script>
+<script>
+  const SRC_CLASS = {
+    'McKinsey':   's-mckinsey',
+    'BCG':        's-bcg',
+    'Gartner':    's-gartner',
+    'Josh Bersin':'s-bersin',
+    'Mercer':     's-mercer',
+    'Deloitte':   's-deloitte',
+    'PwC':        's-pwc',
+    'Korn Ferry': 's-kornferry',
+    'Fortune':    's-fortune',
+    'WEF':        's-wef',
+  };
+  const CAT_TAG = {
+    'org-impact':  ['🏢 组织变革', 't-org'],
+    'hr-transform':['👥 HR 转型',  't-hr'],
+    'both':        ['🔄 双重影响',  't-both'],
+  };
+
+  let cur = { cat: 'all', src: 'all', q: '' };
+
+  function srcClass(s) { return SRC_CLASS[s] || 's-other'; }
+
+  function render() {
+    const arts = ARTICLES_DATA.articles;
+    const q = cur.q.toLowerCase();
+    const filtered = arts.filter(a => {
+      const catOk = cur.cat === 'all' || a.category === cur.cat || a.category === 'both';
+      const srcOk = cur.src === 'all' || a.source === cur.src;
+      const qOk   = !q || a.title.toLowerCase().includes(q) ||
+                    (a.summary||'').toLowerCase().includes(q) ||
+                    a.key_insights.some(i => i.toLowerCase().includes(q)) ||
+                    a.source.toLowerCase().includes(q);
+      return catOk && srcOk && qOk;
+    });
+
+    const grid = document.getElementById('grid');
+    if (!filtered.length) {
+      grid.innerHTML = '<div class="empty"><h3>暂无匹配内容</h3><p>调整筛选条件后重试</p></div>';
+      return;
+    }
+
+    grid.innerHTML = filtered.map((a, i) => {
+      const sc = srcClass(a.source);
+      const [catLbl, catCls] = CAT_TAG[a.category] || ['其他', 't-org'];
+      const langTag = a.lang === 'zh'
+        ? '<span class="tag t-zh">中文</span>'
+        : '<span class="tag t-en">EN</span>';
+      const bullets = a.key_insights.map(ins =>
+        `<li class="insight"><span class="ins-dot">›</span><span>${ins}</span></li>`
+      ).join('');
+      return `
+      <article class="card" style="animation-delay:${i * 0.04}s">
+        <div class="card-top">
+          <span class="source-pill ${sc}">${a.source}</span>
+          <span class="card-date">${a.date}</span>
+        </div>
+        <div class="card-title">${a.title}</div>
+        <div class="tags">
+          <span class="tag ${catCls}">${catLbl}</span>
+          ${langTag}
+        </div>
+        <div>
+          <div class="insights-head">核心观点 Key Insights</div>
+          <ul class="insights">${bullets}</ul>
+        </div>
+        <div class="card-footer">
+          <a class="read-btn" href="${a.url}" target="_blank" rel="noopener">阅读原文 →</a>
+        </div>
+      </article>`;
+    }).join('');
+  }
+
+  function buildSrcFilters() {
+    const sources = [...new Set(ARTICLES_DATA.articles.map(a => a.source))].sort();
+    const g = document.getElementById('src-group');
+    sources.forEach(s => {
+      const b = document.createElement('button');
+      b.className = 'fbtn'; b.dataset.src = s; b.textContent = s;
+      g.appendChild(b);
+    });
+  }
+
+  function updateStats() {
+    const arts = ARTICLES_DATA.articles;
+    const srcs = new Set(arts.map(a => a.source));
+    document.getElementById('s-total').textContent = arts.length;
+    document.getElementById('s-src').textContent = srcs.size;
+    document.getElementById('s-org').textContent = arts.filter(a => a.category === 'org-impact' || a.category === 'both').length;
+    document.getElementById('s-hr').textContent  = arts.filter(a => a.category === 'hr-transform' || a.category === 'both').length;
+    document.getElementById('source-count').textContent = `追踪 ${srcs.size} 家顶级机构`;
+    document.getElementById('last-updated').textContent = `更新于 ${ARTICLES_DATA.last_updated || '今日'}`;
+  }
+
+  // Events
+  document.getElementById('cat-group').addEventListener('click', e => {
+    const b = e.target.closest('[data-cat]');
+    if (!b) return;
+    document.querySelectorAll('#cat-group .fbtn').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    cur.cat = b.dataset.cat;
+    render();
+  });
+  document.getElementById('src-group').addEventListener('click', e => {
+    const b = e.target.closest('[data-src]');
+    if (!b) return;
+    document.querySelectorAll('#src-group .fbtn').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    cur.src = b.dataset.src;
+    render();
+  });
+  document.getElementById('q').addEventListener('input', e => {
+    cur.q = e.target.value;
+    render();
+  });
+
+  buildSrcFilters();
+  updateStats();
+  render();
+</script>
+</body>
+</html>
