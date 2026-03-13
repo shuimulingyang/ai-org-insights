@@ -134,7 +134,10 @@
     .insights-head { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-muted); margin-bottom: 9px; }
     .insights { list-style: none; display: flex; flex-direction: column; gap: 8px; flex: 1; }
     .insight { display: flex; gap: 9px; font-size: 13px; line-height: 1.55; color: var(--text-secondary); }
-    .ins-dot { color: var(--accent); font-size: 18px; line-height: 1.1; flex-shrink: 0; }
+    .ins-dot  { color: var(--accent); font-size: 18px; line-height: 1.1; flex-shrink: 0; }
+    .ins-body { display: flex; flex-direction: column; gap: 2px; }
+    .ins-zh   { font-size: 13px; line-height: 1.55; color: var(--text-secondary); }
+    .ins-en   { font-size: 11.5px; line-height: 1.45; color: var(--text-muted); font-style: italic; }
 
     .card-footer { display: flex; justify-content: flex-end; padding-top: 10px; border-top: 1px solid var(--border); }
     .read-btn {
@@ -279,7 +282,7 @@
         ? '<span class="tag t-zh">中文</span>'
         : '<span class="tag t-en">EN</span>';
       const bullets = a.key_insights.map(ins =>
-        `<li class="insight"><span class="ins-dot">›</span><span>${ins}</span></li>`
+        `<li class="insight"><span class="ins-dot">›</span><span class="ins-body"><span class="ins-zh">${ins.zh}</span><span class="ins-en">${ins.en}</span></span></li>`
       ).join('');
       return `
       <article class="card" style="animation-delay:${i * 0.04}s">

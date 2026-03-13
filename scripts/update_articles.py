@@ -91,9 +91,9 @@ def extract_insights(client, candidates, existing_urls):
     "url": "原始 URL",
     "summary": "一句话中文摘要（30字以内）",
     "key_insights": [
-      "核心观点1（含具体数据或论断，中文，30字以内）",
-      "核心观点2（中文，30字以内）",
-      "核心观点3（中文，30字以内）"
+      { "zh": "中文观点1（含具体数据或论断，30字以内）", "en": "English insight 1 (≤25 words, data-driven)" },
+      { "zh": "中文观点2（30字以内）", "en": "English insight 2 (≤25 words)" },
+      { "zh": "中文观点3（30字以内）", "en": "English insight 3 (≤25 words)" }
     ]
   }}
 ]
