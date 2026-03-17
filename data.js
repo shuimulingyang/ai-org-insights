@@ -1,8 +1,38 @@
 // AI 组织洞察数据 · 每日自动更新
-// 由 Claude AI 搜索并提炼，最后更新：2026-03-13
+// 由 Claude AI 搜索并提炼，最后更新：2026-03-17
 const ARTICLES_DATA = {
-  last_updated: "2026-03-13",
+  last_updated: "2026-03-17",
   articles: [
+    {
+      id: "bersin-2026-imperatives-podcast",
+      title: "2026 Imperatives: Understanding The Biggest HR Transformation In Decades",
+      source: "Josh Bersin",
+      date: "2026-01",
+      category: "hr-transform",
+      lang: "en",
+      url: "https://joshbersin.com/podcast/2026-imperatives-understanding-the-biggest-hr-transformation-in-decades/",
+      summary: "Josh Bersin深度解析2026年HR历史性变革拐点：AI Superagents正触发数十年来最大规模HR职能重构。",
+      key_insights: [
+        { zh: "从助手→Agent→Superagent三阶段演进正在加速：Superagent优化整体业务流程结果而非辅助个人，HR「司机角色」将逐渐消失", en: "Three-stage evolution from assistants → agents → superagents is accelerating: superagents optimize entire process outcomes, not just individual tasks — the HR 'driver role' will gradually disappear" },
+        { zh: "CHRO立即行动三框架：构建AI架构（数据质量是基础）、成为公民开发者（Prompt即编程）、照顾员工（员工敬业度与承诺感正在下降）", en: "CHRO immediate action framework: build AI architecture (data quality is the foundation), become citizen developers (prompting as programming), take care of employees (engagement and commitment are declining)" },
+        { zh: "HR正从「管理流程」转向「架构生态系统」：2026年数百个传统流程将被自动化，HR总职位不会萎缩而是结构性重组——新增AI架构、公民开发等新型角色", en: "HR is shifting from 'managing processes' to 'architecting ecosystems': hundreds of traditional processes will be automated in 2026; total HR headcount won't shrink but will structurally transform — new roles like AI architects and citizen developers emerge" }
+      ]
+    },
+    {
+      id: "gartner-talent-mgmt-trends-2026",
+      title: "Gartner Identifies Four Trends Talent Management Leaders Should Prepare for in 2026",
+      source: "Gartner",
+      date: "2025-10",
+      category: "hr-transform",
+      lang: "en",
+      url: "https://www.gartner.com/en/newsroom/press-releases/2025-10-29-gartner-identifies-four-trends-talent-management-leaders-should-prepare-for-in-2026",
+      summary: "Gartner四大人才管理趋势：基层岗位萎缩、HR招募内转、遗憾留任成首要生产力杀手、绩效管理人机双轨演进。",
+      key_insights: [
+        { zh: "AI成为低价值工作替代方案，基层招聘下降、中级人才依赖增强，HR须将1/3招募容量从外部引进转向内部人才再开发", en: "AI has become a viable alternative for lower-value work; entry-level hiring is declining and reliance on mid-level talent is rising — HR must shift 1/3 of recruiting capacity from external hiring to internal talent development" },
+        { zh: "「遗憾性留任」成为首要生产力障碍：挽留低绩效者比流失高绩效者对组织效能损害更大，传统留才策略须重构", en: "'Regrettable retention' is emerging as the primary productivity barrier: retaining low performers damages organizational effectiveness more than losing top performers — traditional retention strategy must be restructured" },
+        { zh: "绩效管理将「更少也更多地」依赖人类：AI处理数据与模式识别，人类专注复杂判断与情境反馈，双轨并行成新常态", en: "Performance management will become both 'less and more' human: AI handles data and pattern recognition while humans focus on complex judgment and contextual feedback — a dual-track approach becomes the new norm" }
+      ]
+    },
     {
       id: "bersin-ai-corporate-learning-2026",
       title: "New Research: How AI Transforms $400 Billion Of Corporate Learning",
