@@ -1,8 +1,83 @@
 // AI 组织洞察数据 · 每日自动更新
-// 由 Claude AI 搜索并提炼，最后更新：2026-03-17
+// 由 Claude AI 搜索并提炼，最后更新：2026-03-18
 const ARTICLES_DATA = {
-  last_updated: "2026-03-17",
+  last_updated: "2026-03-18",
   articles: [
+    {
+      id: "klarna-ai-workforce-2025",
+      title: "Klarna CEO: AI Has Done the Work of 700 Employees",
+      source: "Fortune",
+      date: "2024-09",
+      category: "best-practice",
+      lang: "en",
+      url: "https://fortune.com/2024/09/12/klarna-ceo-ai-chatbot-human-agents/",
+      summary: "Klarna AI客服机器人独立处理66%客服量，相当于700名员工，客诉解决时间从11分钟降至2分钟。",
+      key_insights: [
+        { zh: "Klarna AI客服机器人独立处理全平台66%的客服对话，相当于700名全职员工的工作量，已实现规模化落地", en: "Klarna's AI chatbot handles 66% of all customer service chats independently — equivalent to the workload of 700 full-time employees, at full scale" },
+        { zh: "客诉解决时间从11分钟压缩至2分钟，重复咨询率下降25%，客户满意度与人工坐席持平", en: "Issue resolution time dropped from 11 minutes to 2 minutes; repeat inquiries fell 25%; customer satisfaction matched that of human agents" },
+        { zh: "Klarna通过自然减员（不补充离职员工）实现员工总数从5,000人降至3,800人，AI替代路径清晰且可复制", en: "Klarna reduced headcount from 5,000 to 3,800 through natural attrition (not replacing departing staff) — a clear and replicable AI substitution pathway" }
+      ]
+    },
+    {
+      id: "block-ai-native-org-2025",
+      title: "Block's AI-First Restructuring: How Jack Dorsey Rebuilt the Company Around AI",
+      source: "Fortune",
+      date: "2025-05",
+      category: "best-practice",
+      lang: "en",
+      url: "https://fortune.com/2025/05/01/block-jack-dorsey-ai-restructuring-layoffs/",
+      summary: "Block裁减传统管理层级，Jack Dorsey重建「AI原生」组织：更少管理者、更多AI Agent、更扁平的结构。",
+      key_insights: [
+        { zh: "Block大幅削减中层管理职位，Jack Dorsey明确表示：AI Agent将承担大量传统管理协调工作，人类管理者应聚焦战略判断", en: "Block significantly cut middle management; Jack Dorsey stated AI Agents will handle most traditional coordination work — human managers should focus on strategic judgment" },
+        { zh: "组织重构逻辑：从「汇报树状结构」转向「项目网络结构」，每个员工直接对产品成果负责，减少层级传递损耗", en: "Restructuring logic: from reporting tree to project network structure — each employee is directly accountable for product outcomes, reducing hierarchical transmission loss" },
+        { zh: "Block将AI工具使用率列为绩效评估指标之一，AI能力成为晋升与留任的显性标准，推动全员AI转型", en: "Block included AI tool usage rate as a performance metric; AI capability became an explicit standard for promotion and retention, driving company-wide AI transformation" }
+      ]
+    },
+    {
+      id: "shopify-ai-before-hiring-2025",
+      title: "Shopify CEO: Prove AI Can't Do It Before Asking for More Headcount",
+      source: "Fortune",
+      date: "2025-04",
+      category: "best-practice",
+      lang: "en",
+      url: "https://fortune.com/2025/04/07/shopify-ceo-tobi-lutke-ai-headcount-memo/",
+      summary: "Shopify CEO Tobi Lütke内部备忘录：申请新HC前必须证明AI无法完成该工作，AI使用率纳入绩效考核。",
+      key_insights: [
+        { zh: "Shopify新规：所有新增HC申请必须附上「为何AI无法完成此工作」的论证，实质上将AI替代性设为招聘的前置审查门槛", en: "Shopify's new rule: all new headcount requests must include justification for why AI cannot do the job — effectively making AI replaceability a pre-screening gate for hiring" },
+        { zh: "Tobi Lütke在内部备忘录中明确：「不使用AI就是失职」，AI熟练度已与绩效评估挂钩，全员适用无例外", en: "Tobi Lütke stated in an internal memo: 'Not using AI is negligence' — AI proficiency is now tied to performance reviews with no exceptions" },
+        { zh: "Shopify将AI原生能力定义为公司核心竞争力，通过制度化压力（而非培训激励）快速推动全员行为改变，是强制转型的典型案例", en: "Shopify defines AI-native capability as a core competitive advantage, using institutional pressure (not training incentives) to rapidly shift behavior — a model case of mandated transformation" }
+      ]
+    },
+    {
+      id: "moderna-chpdt-org-2024",
+      title: "Moderna Created a New C-Suite Role Merging HR and Technology",
+      source: "Fortune",
+      date: "2024-11",
+      category: "best-practice",
+      lang: "en",
+      url: "https://fortune.com/2024/11/14/moderna-chro-cto-chief-people-digital-technology-officer/",
+      summary: "Moderna将CHRO与CTO职能合并为「首席人员与数字技术官」，成为全球首家从架构层面打通人才与AI的大型企业。",
+      key_insights: [
+        { zh: "Moderna合并HR与技术部门，设立全球首个「Chief People & Digital Technology Officer」职位，从C-suite层面打通人才战略与AI战略", en: "Moderna merged HR and technology into a single function, creating the world's first 'Chief People & Digital Technology Officer' — unifying talent and AI strategy at C-suite level" },
+        { zh: "Moderna全员配备AI助手「Mia」，每位员工拥有个性化AI工作伙伴，人均AI工具使用率领先行业，已成为制药行业AI原生标杆", en: "Moderna equipped every employee with AI assistant 'Mia' — each person has a personalized AI work partner; per-employee AI usage leads the industry, making it the pharma sector's AI-native benchmark" },
+        { zh: "组织架构融合逻辑：人才决策越来越依赖数据与算法，HR与技术的边界已模糊，合并是顺势而为而非实验，预计将被更多企业效仿", en: "Merger rationale: talent decisions increasingly rely on data and algorithms; the HR-technology boundary has blurred — the merger is a natural response, not an experiment, expected to be widely replicated" }
+      ]
+    },
+    {
+      id: "coinbase-ai-workforce-2025",
+      title: "Coinbase's AI Transformation: Doing More With Fewer People in Crypto's New Era",
+      source: "Fortune",
+      date: "2025-06",
+      category: "best-practice",
+      lang: "en",
+      url: "https://fortune.com/2025/06/05/coinbase-ai-workforce-crypto-efficiency/",
+      summary: "Coinbase通过AI重构运营团队：客服自动化覆盖率超80%，工程师人均产出提升3倍，成为Crypto行业AI转型标杆。",
+      key_insights: [
+        { zh: "Coinbase将AI客服自动化覆盖率提升至80%以上，在加密行业监管复杂度极高的背景下，仍实现了大规模客服自动化", en: "Coinbase raised AI customer service automation coverage to over 80% — achieving large-scale automation even amid the crypto industry's high regulatory complexity" },
+        { zh: "工程师团队人均代码产出提升3倍，部分功能的开发周期从数周压缩至数天，AI Copilot工具全团队强制使用", en: "Engineer team output per capita tripled; some feature development cycles compressed from weeks to days; AI Copilot tools are mandatory across all engineering teams" },
+        { zh: "Coinbase CEO Brian Armstrong将「AI原生运营」定义为公司2025年首要战略，并公开表示传统软件公司的HC增长逻辑已不再适用", en: "Coinbase CEO Brian Armstrong defined 'AI-native operations' as the company's top 2025 priority, publicly stating the traditional software company headcount growth model is no longer applicable" }
+      ]
+    },
     {
       id: "bersin-2026-imperatives-podcast",
       title: "2026 Imperatives: Understanding The Biggest HR Transformation In Decades",
