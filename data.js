@@ -1,8 +1,38 @@
 // AI 组织洞察数据 · 每日自动更新
-// 由 Claude AI 搜索并提炼，最后更新：2026-03-18
+// 由 Claude AI 搜索并提炼，最后更新：2026-03-24
 const ARTICLES_DATA = {
-  last_updated: "2026-03-18",
+  last_updated: "2026-03-24",
   articles: [
+    {
+      id: "gartner-change-mgmt-chro-ai-2026",
+      title: "Gartner Identifies Top Change Management Trends for CHROs in the Age of AI",
+      source: "Gartner",
+      date: "2026-03",
+      category: "hr-transform",
+      lang: "en",
+      url: "https://www.gartner.com/en/newsroom/press-releases/2026-3-16-gartner-identifies-top-change-management-trends-for-chros-in-age-of-ai",
+      summary: "Gartner最新报告：78%的CHRO认为工作流程必须重新设计才能发挥AI价值，但仅32%的领导者实现了有效变革落地。",
+      key_insights: [
+        { zh: "78%的CHRO认同：必须重新设计工作流程和岗位职责，才能从AI投资中获得回报——变革管理已成为AI落地的核心瓶颈", en: "78% of CHROs agree workflows and roles must be redesigned to realize AI value — change management is now the core bottleneck to AI ROI" },
+        { zh: "能够持续根据员工反馈调整变革计划的组织，变革成功率是其他组织的4倍；但目前仅32%的领导者实现了健康的变革落地", en: "Organizations that continuously adapt change plans based on employee feedback are 4x more likely to succeed; yet only 32% of leaders have achieved healthy change adoption" },
+        { zh: "64%的CHRO表示其领导层缺乏引导持续变革的思维方式；已实现变革的组织同比收入增速是同行的2倍", en: "64% of CHROs say their leaders lack the mindset for continuous change; organizations that succeeded report double the year-on-year revenue growth of peers" }
+      ]
+    },
+    {
+      id: "kornferry-ai-talent-development-2026",
+      title: "How AI Is Revolutionizing Talent Development",
+      source: "Korn Ferry",
+      date: "2026-01",
+      category: "hr-transform",
+      lang: "en",
+      url: "https://www.kornferry.com/insights/featured-topics/gen-ai-in-the-workplace/how-ai-is-revolutionizing-talent-development",
+      summary: "Korn Ferry研究：52%的人才领导者计划2026年将AI Agent纳入团队，但削减基层岗位将引发长期领导力断层危机。",
+      key_insights: [
+        { zh: "52%的人才负责人计划2026年将自主AI Agent纳入团队，标志着AI从「工具」向「队友」的历史性转变正式到来", en: "52% of talent leaders plan to add autonomous AI agents to their teams by 2026, marking the historic shift from AI as tool to AI as teammate" },
+        { zh: "43%的企业计划用AI替代岗位（运营/后台58%、基层37%），但削减基层招聘将导致5-10年后领导力管道断层", en: "43% of companies plan to replace roles with AI (operations 58%, entry-level 37%), but cutting entry-level hires risks a leadership pipeline crisis in 5–10 years" },
+        { zh: "73%的人才负责人认为2026年最需要批判性思维，AI技能仅排第五——人类判断力仍是无法被替代的核心竞争力", en: "73% of talent leaders say critical thinking is the most needed skill in 2026; AI skills rank only fifth — human judgment remains the irreplaceable core competency" }
+      ]
+    },
     {
       id: "klarna-ai-workforce-2025",
       title: "Klarna CEO: AI Has Done the Work of 700 Employees",
