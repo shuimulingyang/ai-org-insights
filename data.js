@@ -1,8 +1,68 @@
 // AI 组织洞察数据 · 每日自动更新
-// 由 Claude AI 搜索并提炼，最后更新：2026-03-24
+// 由 Claude AI 搜索并提炼，最后更新：2026-04-01
 const ARTICLES_DATA = {
-  last_updated: "2026-03-24",
+  last_updated: "2026-04-01",
   articles: [
+    {
+      id: "bcg-chro-reinvention-ai-2026",
+      title: "Reinvention of the CHRO in an AI-Driven Enterprise",
+      source: "BCG",
+      date: "2026-03",
+      category: "hr-transform",
+      lang: "en",
+      url: "https://www.bcg.com/publications/2026/reinvention-of-the-chro-in-an-ai-driven-enterprise",
+      summary: "BCG提出AI时代CHRO角色的三大根本性转变，以及未来型企业与AI滞后企业在人才投入上的巨大差距。",
+      key_insights: [
+        { zh: "仅5%的组织从AI中获得实质性财务回报——AI价值的70%来自「重新思考人的要素」，而非技术本身；CHRO是这70%价值的关键责任人", en: "Only 5% of organizations have realized substantial AI financial gains; 70% of AI value comes from rethinking the people component, not technology — making the CHRO responsible for the majority of AI ROI" },
+        { zh: "未来型企业计划让50%以上员工接受AI技能培训，AI滞后企业仅20%——这一30%的差距将成为未来3年竞争优势的核心分水岭", en: "Future-built companies plan to upskill 50%+ of employees on AI vs. just 20% for laggards — this 30-point gap will be the defining competitive differentiator over the next 3 years" },
+        { zh: "BCG将CHRO新角色定义为三层：人机协作架构师（设计工作流）、组织学习加速器（重建技能体系）、AI信任建构者（管理员工AI焦虑）", en: "BCG defines the new CHRO as three-layered: human-AI collaboration architect (workflow design), organizational learning accelerator (skills rebuilding), and AI trust builder (managing employee AI anxiety)" }
+      ]
+    },
+    {
+      id: "bcg-managing-ai-agents-2025",
+      title: "Leading in the Age of AI Agents: Managing the Machines That Manage Themselves",
+      source: "BCG",
+      date: "2025-10",
+      category: "org-impact",
+      lang: "en",
+      url: "https://www.bcg.com/publications/2025/machines-that-manage-themselves",
+      summary: "BCG提出Agentic时代企业的三类人类角色，以及如何建立针对AI Agent的管理体系与组织架构。",
+      key_insights: [
+        { zh: "35%的企业已在使用Agentic AI，44%计划很快采用——组织架构、汇报关系和KPI体系将在2026-2027年面临系统性重构", en: "35% of companies already use agentic AI, 44% plan to adopt soon — org structures, reporting lines, and KPI systems face systemic redesign in 2026–2027" },
+        { zh: "BCG将人类在Agentic时代定义为三类角色：M型通才（跨域流利+AI协作）、T型专家（纵深专业）、AI增强型一线员工，三种角色需比例重配", en: "BCG defines 3 human roles in the agentic era: M-shaped generalists (cross-domain + AI fluency), T-shaped experts (deep specialists), and AI-augmented frontline workers — requiring proportional rebalancing" },
+        { zh: "AI Agent正从「工具」变成「员工」，企业必须建立针对Agent的管理体系：绩效衡量、问责边界和监督机制——这是当前组织设计的核心空白", en: "AI agents are shifting from tools to employees — organizations must establish agent governance covering performance measurement, accountability boundaries, and oversight mechanisms — the central gap in current org design" }
+      ]
+    },
+    {
+      id: "mercer-davos-2026-ai-work",
+      title: "Transforming Work in an AI World: Reflections from Davos 2026",
+      source: "Mercer",
+      date: "2026-01",
+      category: "both",
+      lang: "en",
+      url: "https://www.mercer.com/insights/people-strategy/hr-transformation/transforming-work-in-an-ai-world-reflections-from-davos-2026/",
+      summary: "Mercer达沃斯2026洞察：员工AI焦虑两年内从28%激增至40%，真正的转型壁垒是信任而非技术。",
+      key_insights: [
+        { zh: "员工对AI导致失业的担忧从2024年的28%激增至2026年的40%——「信任赤字」已超越技术差距，成为AI转型的首要壁垒", en: "Employee concerns about AI-driven job loss surged from 28% in 2024 to 40% in 2026 — the 'trust deficit' now surpasses the technology gap as the primary barrier to AI transformation" },
+        { zh: "达沃斯全球领袖共识：重新设计工作本身（Work Redesign）而非仅部署工具，才能释放AI价值；63%的C-suite将工作再设计列为最高人才ROI来源", en: "Davos global leaders' consensus: redesigning work itself (not just deploying tools) unlocks AI value; 63% of C-suite leaders rank work redesign as the highest people-related ROI source" },
+        { zh: "Mercer提出「Human-AI Power Couple」框架：AI承担数据密集型任务，人类专注判断、关系与情境——深度融合而非替代才是竞争优势的本质", en: "Mercer's 'Human-AI Power Couple' framework: AI handles data-intensive tasks while humans focus on judgment, relationships, and context — deep integration, not replacement, is the source of competitive advantage" }
+      ]
+    },
+    {
+      id: "pwc-ai-predictions-2026",
+      title: "PwC 2026 AI Business Predictions: Agents, Workforce and the New Competitive Edge",
+      source: "PwC",
+      date: "2026-01",
+      category: "org-impact",
+      lang: "en",
+      url: "https://www.pwc.com/us/en/tech-effect/ai-analytics/ai-predictions.html",
+      summary: "PwC年度AI预测：AI Agent全面嵌入业务流程，组织需要Agent编排等新技能，AI人才薪资溢价已达56%。",
+      key_insights: [
+        { zh: "PwC预测AI Agent将在2026年全面嵌入业务流程，催生三类新需求：Agent编排技能、结果导向激励机制、专注监督与战略的新岗位", en: "PwC predicts AI agents will fully embed into business processes in 2026, creating 3 new demands: agent orchestration skills, outcome-based incentives, and new oversight/strategy roles" },
+        { zh: "分析近10亿条职位广告数据：具备AI技能的员工薪资溢价已达56%（较上年25%翻倍）——AI能力正成为重构薪酬体系的核心驱动力", en: "Analysis of nearly 1 billion job ads: workers with AI skills now command a 56% wage premium (doubling from 25% the prior year) — AI capability is becoming the core driver of compensation restructuring" },
+        { zh: "2026年「AI人才战争」焦点转移：从招聘AI工程师转向全员AI素养建设，Agent设计、提示工程和AI监督成为最稀缺的跨职能能力", en: "The 2026 'AI talent war' shifts focus from hiring AI engineers to building universal AI literacy — agent design, prompt engineering, and AI oversight become the scarcest cross-functional capabilities" }
+      ]
+    },
     {
       id: "gartner-change-mgmt-chro-ai-2026",
       title: "Gartner Identifies Top Change Management Trends for CHROs in the Age of AI",
