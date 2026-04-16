@@ -1,8 +1,98 @@
 // AI 组织洞察数据 · 每日自动更新
-// 由 Claude AI 搜索并提炼，最后更新：2026-04-01
+// 由 Claude AI 搜索并提炼，最后更新：2026-04-16
 const ARTICLES_DATA = {
-  last_updated: "2026-04-01",
+  last_updated: "2026-04-16",
   articles: [
+    {
+      id: "mckinsey-tech-workforce-ai-first-2026",
+      title: "Designing an End-to-End Technology Workforce for the AI-First Era",
+      source: "McKinsey",
+      date: "2026-03",
+      category: "org-impact",
+      lang: "en",
+      url: "https://www.mckinsey.com/capabilities/mckinsey-technology/our-insights/designing-an-end-to-end-technology-workforce-for-the-ai-first-era",
+      summary: "麦肯锡指出AI时代企业技术团队须从根本上重设人才策略：重新平衡招聘、内部培养与外包组合，以应对AI Agent全面接管重复性技术工作的现实。",
+      key_insights: [
+        { zh: "AI时代须重新平衡技术人才的雇用、内部培养与外包策略，技术团队架构需根本性重塑", en: "Companies must rebalance hiring, upskilling, and vendor use as AI agents absorb more tech work" },
+        { zh: "技术人员角色向AI编排、数据治理与战略决策迁移，重复性执行工作被AI全面接管", en: "Tech roles shift from execution to AI orchestration, data governance, and strategic judgment" },
+        { zh: "未来技术团队呈「哑铃型」：少量顶端AI架构师 + AI赋能的泛化人才，中间技术层大幅压缩", en: "Tech teams polarize: elite AI architects at top, AI-enabled generalists at base, mid-tier shrinks" }
+      ]
+    },
+    {
+      id: "bcg-ai-reshape-jobs-2026",
+      title: "AI Will Reshape More Jobs Than It Replaces",
+      source: "BCG",
+      date: "2026-03",
+      category: "org-impact",
+      lang: "en",
+      url: "https://www.bcg.com/publications/2026/ai-will-reshape-more-jobs-than-it-replaces",
+      summary: "BCG研究显示AI对工作的冲击以「重塑」为主而非「替代」：未来5年仅10–15%美国职位面临消亡，但绝大多数岗位将经历深度职责重构，企业人才策略须从招聘转向持续任务再设计。",
+      key_insights: [
+        { zh: "未来5年仅10–15%美国职位可能被AI完全替代，但绝大多数岗位将经历实质性职责重构", en: "Only 10–15% of US jobs face elimination in 5 years; the majority will be substantially redesigned" },
+        { zh: "AI驱动的岗位重塑速度已超过企业内部技能更新速度，形成结构性技能错配危机", en: "AI-driven role redesign is outpacing internal reskilling, creating a structural skills mismatch" },
+        { zh: "企业须从「招聘补缺」转向「持续重设工作内容」，人才策略核心变量从HC数量变为任务矩阵", en: "Firms must shift from backfill hiring to continuous task redesign; HC becomes secondary to task mapping" }
+      ]
+    },
+    {
+      id: "bersin-gloat-ai-agents-hr-2026",
+      title: "Gloat Enters the Crowded War for AI Agents in HR",
+      source: "Josh Bersin",
+      date: "2026-03",
+      category: "hr-transform",
+      lang: "en",
+      url: "https://joshbersin.com/2026/03/gloat-enters-the-crowded-war-for-ai-agents-in-hr/",
+      summary: "Josh Bersin分析HR科技市场正快速向AI Agent整合，各大平台竞相自动化传统HR操作，能否将30–40%的HR工作自动化将成为下一轮竞争核心。",
+      key_insights: [
+        { zh: "HR科技市场加速向AI Agent整合，竞争核心从功能全面转向能否自动化30–40%传统HR操作", en: "HR tech consolidates around AI agents; key differentiator is automating 30–40% of HR operations" },
+        { zh: "Gloat等平台将技能图谱与AI Agent结合，实现跨岗位内部人才流动的自动匹配与推荐", en: "Platforms like Gloat combine skills graphs with AI agents to automate internal mobility matching" },
+        { zh: "HR团队平均使用11+个系统面临工具碎片化，AI Agent跨系统整合将成为下一轮竞争壁垒", en: "HR teams average 11+ systems; AI agent integration across these will define the next competitive moat" }
+      ]
+    },
+    {
+      id: "fiverr-ai-first-workforce-2025",
+      title: "Fiverr's AI-First Focus Leads to 30% Workforce Reduction",
+      source: "AllWork",
+      date: "2025-09",
+      category: "best-practice",
+      lang: "en",
+      url: "https://allwork.space/2025/09/fiverr-to-lay-off-30-of-workforce-change-to-an-ai-first-strategy/",
+      summary: "Fiverr裁减约250名员工（占总HC约30%）转型AI-First企业，将25% EBITDA利润率目标从2027年提前至2026年实现，揭示「AI赋能」与「AI替代」可在同一企业同步发生。",
+      key_insights: [
+        { zh: "Fiverr裁减30%员工（约250人）转型AI-First企业，将25% EBITDA目标从2027年提前至2026年实现", en: "Fiverr cut 30% of workforce (~250 roles) to become AI-first, pulling 25% EBITDA target forward to 2026" },
+        { zh: "CEO要求全员AI技能提升后仍大规模裁员，揭示「AI赋能」与「AI替代」可在同一企业同步发生", en: "CEO mandated AI upskilling then cut 30%, proving AI enablement and displacement can coexist" },
+        { zh: "AI接管内容创作与平台运营任务后，节省的成本转化为利润率提升而非再投资人力", en: "AI handles content and ops tasks; cost savings convert to margin gains rather than headcount reinvestment" }
+      ]
+    },
+    {
+      id: "duolingo-ai-contractors-2025",
+      title: "Duolingo to Replace Contract Workers With AI",
+      source: "Tech.co",
+      date: "2025-04",
+      category: "best-practice",
+      lang: "en",
+      url: "https://tech.co/news/duolingo-replaces-workers-with-ai",
+      summary: "Duolingo以AI取代内容生产外包合同工，保留全职员工的同时将课程产出速度提升10倍以上，课程数量从100门扩展至超500门，CEO对「替代合同工」与「裁减正式员工」的明确区分成为AI转型叙事管理的标杆。",
+      key_insights: [
+        { zh: "Duolingo以AI取代内容生产合同工，保留全职员工的同时将课程内容产出速度提升10倍以上", en: "Duolingo replaced content contractors with AI, retaining FTEs while accelerating output by 10x+" },
+        { zh: "CEO明确区分「替代合同工」与「裁减正式员工」，成为企业AI转型叙事管理的标杆案例", en: "CEO's distinction between contractor replacement vs FTE layoffs became a model for AI transition messaging" },
+        { zh: "AI-First内容策略使课程数量从100门扩展至超500门，每门新课程边际人力成本趋近于零", en: "AI-first strategy expanded courses from 100 to 500+, reducing marginal labor cost per course to near zero" }
+      ]
+    },
+    {
+      id: "heineken-ai-evergreen-2026",
+      title: "Heineken to Cut 6,000 Jobs Citing AI Productivity Savings",
+      source: "Reuters",
+      date: "2026-02",
+      category: "best-practice",
+      lang: "en",
+      url: "https://www.reuters.com/business/heineken-cut-6000-jobs-restructuring-2026-02/",
+      summary: "Heineken在EverGreen 2030战略中宣布裁减6,000个职位，明确将AI与数字化生产力提升列为主要驱动因素，标志AI驱动减员从科技行业正式蔓延至传统消费品与制造业。",
+      key_insights: [
+        { zh: "Heineken裁减6,000个职位，明确将AI与数字化生产力提升列为主要驱动因素，非单纯成本削减", en: "Heineken cut 6,000 jobs, explicitly citing AI-driven productivity as the primary driver, not cost cutting" },
+        { zh: "EverGreen 2030战略将AI节省的人力成本转化为定价竞争力与股东回报，而非重新投入员工数量", en: "EverGreen 2030 converts AI labor savings into pricing power and shareholder returns, not headcount" },
+        { zh: "传统消费品龙头引用AI重塑组织结构，标志AI驱动减员从科技行业正式蔓延至制造业", en: "Legacy FMCG giant citing AI for restructuring signals the trend has spread beyond tech to manufacturing" }
+      ]
+    },
     {
       id: "bcg-chro-reinvention-ai-2026",
       title: "Reinvention of the CHRO in an AI-Driven Enterprise",
