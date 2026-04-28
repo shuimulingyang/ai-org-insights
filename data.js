@@ -1,8 +1,68 @@
 // AI 组织洞察数据 · 每日自动更新
-// 由 Claude AI 搜索并提炼，最后更新：2026-04-16
+// 由 Claude AI 搜索并提炼，最后更新：2026-04-28
 const ARTICLES_DATA = {
-  last_updated: "2026-04-16",
+  last_updated: "2026-04-28",
   articles: [
+    {
+      id: "bcg-work-reinvention-ceo-mandate-2026",
+      title: "AI Has Made Work Reinvention a CEO Mandate",
+      source: "BCG",
+      date: "2026-04",
+      category: "both",
+      lang: "en",
+      url: "https://www.bcg.com/publications/2026/ai-has-made-work-reinvention-a-ceo-mandate",
+      summary: "BCG最新研究：AI已将「工作再造」从HR议题升格为CEO必须亲自主导的首要议程，领先企业CEO直接主导组织重构，每投入1美元技术须同步投入5美元在人的变革上。",
+      key_insights: [
+        { zh: "AI已将「工作再造」从HR议题升格为CEO优先议程，领先企业CEO直接主导组织重构而非委托HR部门", en: "AI has elevated work reinvention from an HR topic to a CEO mandate; leading CEOs now directly own org restructuring" },
+        { zh: "AI价值实现高度依赖人员投入：每投入1美元技术，应同步投入5美元在人的变革管理上", en: "For every $1 spent on technology, $5 should be invested in people — AI value realization depends as much on humans as on tools" },
+        { zh: "员工AI使用率从2023年的30%跃升至2025年的76%，两年完成技术普及临界跃迁，组织结构调整须同步跟上", en: "AI workplace adoption surged from 30% (2023) to 76% (2025) — org structure redesign must now catch up with tool adoption" }
+      ]
+    },
+    {
+      id: "mckinsey-how-ai-changes-work-2026",
+      title: "How AI Is—and Isn't—Changing the Future of Work",
+      source: "McKinsey",
+      date: "2026-04",
+      category: "org-impact",
+      lang: "en",
+      url: "https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-organization-blog/how-ai-is-and-isnt-changing-the-future-of-work",
+      summary: "麦肯锡深度分析AI对未来工作的真实影响：AI正推动企业重新定义端到端流程与组织域边界，而非仅优化单一任务——但大多数企业尚未将AI工具使用转化为实质性的组织结构调整。",
+      key_insights: [
+        { zh: "AI正推动企业重新定义端到端流程与组织域边界，而非仅优化单一任务——组织结构重塑进入系统性阶段", en: "AI is prompting firms to redefine end-to-end processes and org domains, not just optimize tasks — systemic restructuring has begun" },
+        { zh: "2025年76%员工已在工作中使用AI（2023年仅30%），但多数企业尚未将工具使用转化为实质性组织结构调整", en: "76% of employees use AI at work in 2025 (up from 30% in 2023), yet most firms haven't translated usage into structural org changes" },
+        { zh: "仅购买工具而不重构工作流的企业将系统性落后——AI价值实现的核心瓶颈是组织设计，而非技术本身", en: "Firms buying AI tools without redesigning workflows will fall systematically behind — org design, not technology, is the real bottleneck" }
+      ]
+    },
+    {
+      id: "atlassian-ai-workforce-restructuring-2026",
+      title: "AI-Native Workforce Restructuring: Atlassian's High-Stakes Pivot",
+      source: "AI Certs",
+      date: "2026-03",
+      category: "best-practice",
+      lang: "en",
+      url: "https://www.aicerts.ai/news/ai-native-workforce-restructuring-atlassians-high-stakes-pivot/",
+      summary: "Atlassian裁减10%员工（约1,600人）为AI发展提供资金，将客服、行政与遗留平台团队列为优先调整对象，同步在云计算和企业销售方向净增岗位，形成结构性人才再配置。",
+      key_insights: [
+        { zh: "Atlassian裁减10%员工（约1,600人）为AI发展提供资金，明确将客服、行政与遗留平台团队列为优先调整对象", en: "Atlassian cut 10% of staff (~1,600 roles) to fund AI growth, targeting customer support, administration, and legacy platform teams first" },
+        { zh: "公司将人与AI定位为「互补而非替代」，云计算和企业销售团队同步净增员工，形成结构性人才再配置模式", en: "Atlassian positioned humans and AI as complementary — net hiring in cloud and enterprise sales alongside AI-driven cuts in other areas" },
+        { zh: "投资者对AI驱动裁员反应积极，市场正式将「精简+AI投资」视为价值创造信号而非危机标志", en: "Investors reacted positively, signaling markets now treat 'lean + AI investment' as a value creation signal, not a distress indicator" }
+      ]
+    },
+    {
+      id: "ey-ai-headcount-reduction-2026",
+      title: "Nearly 20% of Firms Actively Reducing Headcount as Direct Result of AI Adoption",
+      source: "EY",
+      date: "2026-03",
+      category: "org-impact",
+      lang: "en",
+      url: "https://sea.peoplemattersglobal.com/news/strategic-hr/nearly-20percent-firms-actively-reducing-headcount-as-a-direct-result-of-ai-adoption-ey-report-47707",
+      summary: "EY最新报告：近20%的企业正在直接因AI采用而主动削减人员编制，AI驱动减员已从试验性行为转为系统性战略；最佳实践企业采用基于自然流失率的2-3年渐进式路径。",
+      key_insights: [
+        { zh: "EY报告：近20%的企业正直接因AI采用而主动削减人员编制，AI驱动减员从试验性行为升级为系统性战略", en: "EY report: Nearly 20% of firms are actively reducing headcount as a direct result of AI adoption — now a systemic strategy, not a pilot" },
+        { zh: "领先企业将AI投资从运营效率延伸至新业务模式创造，AI正从「成本节约工具」升级为「增长引擎」", en: "Leading firms extend AI investment from operational efficiency to new business model creation — AI evolves from cost tool to growth engine" },
+        { zh: "AI驱动减员最佳实践：利用自然流失率规划2-3年渐进路径，避免激进单次裁员导致知识流失与团队冲击", en: "Best practice: plan a 2–3 year gradual reduction path using natural attrition, avoiding aggressive one-time layoffs that destroy institutional knowledge" }
+      ]
+    },
     {
       id: "mckinsey-tech-workforce-ai-first-2026",
       title: "Designing an End-to-End Technology Workforce for the AI-First Era",
