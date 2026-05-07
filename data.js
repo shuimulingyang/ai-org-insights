@@ -1,8 +1,98 @@
 // AI 组织洞察数据 · 每日自动更新
-// 由 Claude AI 搜索并提炼，最后更新：2026-04-28
+// 由 Claude AI 搜索并提炼，最后更新：2026-05-07
 const ARTICLES_DATA = {
-  last_updated: "2026-04-28",
+  last_updated: "2026-05-07",
   articles: [
+    {
+      id: "coinbase-ai-workforce-restructure-2026",
+      title: "Coinbase Cuts 14% of Workforce, Replaces Managers with 'Player-Coaches' in AI-Era Restructuring",
+      source: "Fortune",
+      date: "2026-05",
+      category: "best-practice",
+      lang: "en",
+      url: "https://fortune.com/2026/05/05/coinbase-layoffs-14-of-employees-ai-tech-ai-job-anxiety-crypto/",
+      summary: "Coinbase裁减14%员工（约700人），同步将组织扁平化至最多5层、废除纯管理岗——CEO Brian Armstrong将此定义为AI时代的主动进化：AI让非技术团队也能写代码，传统层级结构失去存在价值。",
+      key_insights: [
+        { zh: "Coinbase裁减14%（约700人），将管理层级压缩至最多5层，废除「纯管理者」角色，以「球员-教练」型负责人取代", en: "Coinbase cut 14% (~700 roles), capped org to 5 layers max, eliminated 'pure managers' in favor of 'player-coaches' who lead and contribute" },
+        { zh: "CEO明确：AI已让非技术团队具备写代码与流程自动化能力，旧有大编制结构的合理性从根本上被颠覆", en: "CEO cited AI enabling non-technical teams to ship code and automate tasks — the rational basis for large headcounts is structurally undermined" },
+        { zh: "Crypto行业AI驱动减员标志：Coinbase是首家明确以「AI加速」（非单纯市场周期）为主因完成组织重构的头部交易所", en: "Coinbase is the first major crypto exchange to explicitly cite 'AI acceleration' — not just market cycles — as the primary driver for structural org change" }
+      ]
+    },
+    {
+      id: "mckinsey-rewired-2-talent-plan-2026",
+      title: "Rewired 2.0: The AI Talent Plan — How Leading Companies Are Winning with AI",
+      source: "McKinsey",
+      date: "2026-05",
+      category: "org-impact",
+      lang: "en",
+      url: "https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-organization-blog/the-rewired-2-point-0-talent-plan",
+      summary: "麦肯锡Rewired 2.0：AI时代的人才转型路线图。IT人才结构须从管理层主导转向70%工程师；组织须同时规划三类产能——人、AI代理、物理自动化；管理者角色从监督任务转为编排混合系统。",
+      key_insights: [
+        { zh: "IT人才结构须重置：内包比例提升至70%、外包降至30%，内部编制从管理层主导转向70%工程师比例", en: "IT talent must rebalance: 70% in-house / 30% outsourced, with internal cohorts shifting from manager-heavy to 70% engineers" },
+        { zh: "组织须同时规划三类产能——人、AI代理、物理自动化，团队规模将随代理能力增长而系统性收缩", en: "Workforce planning must now account for three capacity classes: people, agents, and physical automation — team sizes shrink as agent capacity grows" },
+        { zh: "管理者角色根本性转变：从监督人员任务执行转向编排人机混合工作流，需掌握AI代理设计与监督能力", en: "Managers must shift from supervising tasks to orchestrating hybrid human-agent workflows — a fundamentally different skill set is required" }
+      ]
+    },
+    {
+      id: "mckinsey-state-of-organizations-2026",
+      title: "The State of Organizations 2026: Three Tectonic Forces Reshaping Companies",
+      source: "McKinsey",
+      date: "2026-02",
+      category: "org-impact",
+      lang: "en",
+      url: "https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-state-of-organizations",
+      summary: "麦肯锡基于全球15个国家、16个行业10,000+高管调研：三大构造力正在重塑组织——AI技术渗透、地缘经济动荡、劳动力结构变迁。88%企业已部署AI，但81%尚未实现实质性利润影响，双重变革（技术+组织）是关键。",
+      key_insights: [
+        { zh: "三大构造力重塑组织：①AI与自动化重新定义工作方式与组织边界；②地缘经济动荡提升复杂性；③员工预期与代际结构变迁重构劳动力", en: "Three tectonic forces: AI/automation redefining work, geopolitical-economic disruption raising complexity, and workforce demographic shifts transforming labor" },
+        { zh: "88%企业已部署AI，但81%未见实质利润影响——成功路径是「双重变革」：技术变革与组织变革必须同步推进", en: "88% of firms deploy AI but 81% see no meaningful P&L impact — the winning path requires double transformation: technological AND organizational" },
+        { zh: "四分之一高管预计AI代理将在短期内作为自主团队成员运作，组织须从碎片化用例转向端到端流程的代理AI嵌入", en: "1 in 4 leaders expect AI agents as autonomous team members soon; orgs must move from isolated use cases to agentic AI embedded in end-to-end workflows" }
+      ]
+    },
+    {
+      id: "bcg-ai-transformation-workforce-2026",
+      title: "AI Transformation Is a Workforce Transformation",
+      source: "BCG",
+      date: "2026-01",
+      category: "both",
+      lang: "en",
+      url: "https://www.bcg.com/publications/2026/ai-transformation-is-a-workforce-transformation",
+      summary: "BCG研究：AI转型本质是劳动力转型——实现最高AI价值的企业，同时拥有最雄心勃勃的员工技能提升项目。技术自动化≠岗位消失，绝大多数职位将经历深度重构而非消亡，企业须将人员转型列为与技术部署同等优先级。",
+      key_insights: [
+        { zh: "AI价值实现与员工技能升级直接正相关：AI ROI最高的企业同时拥有覆盖面最广、投入最深的员工技能提升项目", en: "AI ROI and upskilling ambition are directly correlated: companies with the highest AI returns also run the most aggressive reskilling programs" },
+        { zh: "任务自动化≠岗位消失：AI主要重构职责矩阵而非整体替代职位，过度聚焦裁员而非职责重设的企业将损失关键人才", en: "Task automation does not equal job elimination: AI primarily redesigns role responsibilities rather than eliminating positions wholesale" },
+        { zh: "AI转型须将劳动力转型列为第一优先级，而非技术部署后的二阶任务——两者须同步规划、同步落地", en: "Workforce transformation must be a first-order priority alongside technology deployment — treating it as a second-order concern is a structural failure mode" }
+      ]
+    },
+    {
+      id: "bersin-hr-2030-agentic-2026",
+      title: "Introducing HR 2030: A Vision for Agentic Human Resources",
+      source: "Josh Bersin",
+      date: "2026-04",
+      category: "hr-transform",
+      lang: "en",
+      url: "https://joshbersin.com/2026/04/introducing-hr-2030-a-vision-for-agentic-human-resources/",
+      summary: "Josh Bersin发布HR 2030愿景：HR将由Systemic HR框架与AI超级代理架构融合驱动。AI代理将掌握每位员工的深度数据——从技能、绩效到竞争薪酬基准——实现真正的个性化HR运营，人员配置的中心从「人」转向「代理+人」。",
+      key_insights: [
+        { zh: "HR 2030将Systemic HR（HR作为整合运营体系）与AI超级代理架构融合：HR部门从流程管理者转型为代理系统编排者", en: "HR 2030 merges Systemic HR with AI Superagent architecture — HR functions shift from process managers to orchestrators of agentic systems" },
+        { zh: "AI代理将获取每位员工的完整数据（技能、绩效、会议记录、薪酬基准、外部竞争数据），HR决策将从聚合统计转向个体级实时洞察", en: "AI agents will access comprehensive per-employee data (skills, performance, meetings, pay benchmarks, competitive data) — HR shifts from aggregate stats to real-time individual insight" },
+        { zh: "微软、Roblox、谷歌、Mastercard、ServiceNow已率先进入代理HR阶段；大多数传统行业仍处于系统整合早期，差距将在2026-2028年快速拉大", en: "Microsoft, Roblox, Google, Mastercard, ServiceNow are already in agentic HR — most traditional industries are still at system integration stage; the gap will widen fast in 2026–2028" }
+      ]
+    },
+    {
+      id: "bersin-hr-reinvention-2026",
+      title: "The Great Reinvention of Human Resources Has Begun",
+      source: "Josh Bersin",
+      date: "2026-01",
+      category: "hr-transform",
+      lang: "en",
+      url: "https://joshbersin.com/2026/01/the-great-reinvention-of-human-resources-has-begun/",
+      summary: "Josh Bersin宣告HR最大规模转型已正式开启：AI超级代理将自动化30-40%的HR职位，L&D领域60-70%的工作可自动化。HR将从行政成本中心转型为战略性「全栈HR」——覆盖整个员工生命周期的端到端价值创造者。",
+      key_insights: [
+        { zh: "AI超级代理将自动化30-40%的现有HR职位，L&D（学习与发展）领域尤为激烈——60-70%的培训团队工作可被自动化", en: "AI superagents will automate 30–40% of existing HR roles; L&D is hit hardest — 60–70% of training team work is automatable" },
+        { zh: "HR须从「行政成本中心」转型为「战略全栈HR」：覆盖员工全生命周期、直接驱动业务成果，而非仅提供支持服务", en: "HR must transform from administrative cost center to strategic 'full-stack HR' — driving business outcomes across the full employee lifecycle, not just providing support services" },
+        { zh: "2026年是HR转型临界点：企业在此窗口期内未能完成AI能力建设的HR部门，将在2027-2028年面临预算与影响力的双重挤压", en: "2026 is the inflection point: HR teams that fail to build AI capabilities in this window face dual pressure on budget and influence in 2027–2028" }
+      ]
+    },
     {
       id: "bcg-work-reinvention-ceo-mandate-2026",
       title: "AI Has Made Work Reinvention a CEO Mandate",
