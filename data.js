@@ -1,8 +1,83 @@
 // AI 组织洞察数据 · 每日自动更新
-// 由 Claude AI 搜索并提炼，最后更新：2026-05-07
+// 由 Claude AI 搜索并提炼，最后更新：2026-05-11
 const ARTICLES_DATA = {
-  last_updated: "2026-05-07",
+  last_updated: "2026-05-11",
   articles: [
+    {
+      id: "cloudflare-ai-layoffs-record-revenue-2026",
+      title: "Cloudflare Cuts 20% of Workforce Citing AI — Despite Hitting Record $640M Revenue",
+      source: "TechCrunch",
+      date: "2026-05",
+      category: "best-practice",
+      lang: "en",
+      url: "https://techcrunch.com/2026/05/08/cloudflare-says-ai-made-1100-jobs-obsolete-even-as-revenue-hit-a-record-high/",
+      summary: "Cloudflare在创纪录季度营收（$639.8M，同比+34%）的同时宣布裁减1,100名员工（20%）——理由不是成本压力，而是AI代理已使这些岗位过时。公司内部AI使用量3个月内猛增600%，CEO称此举是「定义代理AI时代顶级公司运作方式」的主动进化。",
+      key_insights: [
+        { zh: "Cloudflare在历史最高季收（$640M，+34% YoY）下裁减20%员工，打破「财务困境才裁员」叙事——AI驱动减员与业绩增长可同步发生", en: "Cloudflare cut 20% at record revenue ($640M, +34% YoY), shattering the 'layoffs = financial distress' narrative — AI-driven cuts and revenue growth can coexist" },
+        { zh: "内部AI使用量3个月内激增超600%，工程、HR、财务、市场全员每日运行数千个AI代理工作流，岗位过时速度远超预期", en: "Internal AI usage surged 600%+ in 3 months; employees across all functions run thousands of AI agent sessions daily — role obsolescence is accelerating far faster than expected" },
+        { zh: "CEO明确：这不是成本削减，而是「主动定义代理AI时代的公司运作模式」——AI驱动减员正式从被动防御转变为主动战略姿态", en: "CEO explicitly framed cuts as proactive — 'defining how a world-class company operates in the agentic AI era' — shifting AI-driven reduction from defensive to strategic" }
+      ]
+    },
+    {
+      id: "meta-ai-pods-restructuring-2026",
+      title: "Meta Cuts 8,000 Jobs and Cancels 6,000 Open Roles to Fund $135B AI Infrastructure Pivot",
+      source: "The Next Web",
+      date: "2026-05",
+      category: "best-practice",
+      lang: "en",
+      url: "https://thenextweb.com/news/meta-layoffs-8000-ai-restructuring-may-2026",
+      summary: "Meta裁减8,000名员工（10%）并取消6,000个在途招聘，同步将全公司重组为「AI Pods」架构——新增岗位类别：AI builder、AI pod lead、AI org lead。全年AI基础设施支出$115-135B，几乎是2025年的两倍，彻底重塑组织形态。",
+      key_insights: [
+        { zh: "Meta裁减10%（8,000人）+取消6,000个在招岗位，合计减少14,000个职位，同步将全公司重组为AI Pods架构，设立全新岗类：AI builder、AI pod lead、AI org lead", en: "Meta eliminated 14,000 positions (8,000 cuts + 6,000 cancelled reqs) while restructuring into AI Pods with new role categories: AI builder, AI pod lead, AI org lead" },
+        { zh: "2026年AI基础设施支出$115-135B（2025年为$72.2B），几乎翻倍——将人力成本节省直接转化为算力与模型基础设施投资", en: "Meta's 2026 AI capex is $115–135B (vs $72B in 2025) — human cost savings are being directly reinvested into compute and model infrastructure" },
+        { zh: "组织重构逻辑：从职能团队→跨职能AI Pod，工程师从全公司向Applied AI组织转移，CEO专注「让更少人做更多事」而非任务优化", en: "Structural shift: functional teams → cross-functional AI Pods; engineers redistributed company-wide into Applied AI — CEO's goal is 'fewer people doing more' not task optimization" }
+      ]
+    },
+    {
+      id: "gartner-chro-priorities-2026",
+      title: "Gartner: CHROs' Top Priorities for 2026 — Realizing AI Value and Driving Performance",
+      source: "Gartner",
+      date: "2025-10",
+      category: "hr-transform",
+      lang: "en",
+      url: "https://www.gartner.com/en/newsroom/press-releases/2025-10-02-gartner-says-chros-top-priorities-for-2026-center-around-realizing-ai-value-and-driving-performance-amid-uncertainty",
+      summary: "Gartner基于426位CHRO、23个行业、4大区域调研发布2026年HR首要任务：AI将从HR工具升格为「同事」乃至「人力替代者」，50%的HR工作将被AI代理自动化或接管，但仅1/50的AI项目实现了变革性价值。",
+      key_insights: [
+        { zh: "50%的HR工作将被AI代理自动化或接管，100%的HR工作将被AI增强——AI正从边缘工具升格为HR运营核心，甚至部分替代人力", en: "Up to 50% of HR work will be automated or run by AI agents; 100% will be AI-augmented — AI shifts from HR edge tool to core, and increasingly a substitute for human effort" },
+        { zh: "仅1/50的AI项目实现变革性价值；「Workslop」风险浮现——快速但质量低劣的AI生成内容正在侵蚀组织知识质量与员工技能", en: "Only 1 in 50 AI initiatives delivers transformative value; 'workslop' risk is rising — fast but low-quality AI-generated work is eroding org knowledge quality and employee skills" },
+        { zh: "CHRO 2026四大优先议程：①驾驭AI革新HR运营；②塑造人机协同时代的工作方式；③凝聚领导层应对不确定性；④修复文化侵蚀以驱动绩效", en: "CHRO 2026 four-agenda: ①Harness AI to revolutionize HR ops ②Shape work in human-machine era ③Mobilize leaders for uncertainty ④Address culture atrophy to drive performance" }
+      ]
+    },
+    {
+      id: "gartner-future-work-trends-chro-2026",
+      title: "Gartner Identifies Top Future of Work Trends for CHROs in 2026",
+      source: "Gartner",
+      date: "2026-01",
+      category: "both",
+      lang: "en",
+      url: "https://www.gartner.com/en/newsroom/press-releases/2026-01-12-gartner-identifies-the-top-future-of-work-trends-for-chros-in-2026",
+      summary: "Gartner 2026未来工作十大趋势：GenAI近乎全面渗透带来的心理负担与技能侵蚀已成CHRO核心议题；HR须建立「当下-未来」双轨人才策略，同步应对AI带来的生产力窗口期与人员风险。",
+      key_insights: [
+        { zh: "GenAI近乎全面渗透正在造成系统性心理压力与职业倦怠——CHRO须以透明、同理心与主动健康策略来应对AI扩散带来的员工心理冲击", en: "Near-ubiquitous GenAI adoption is causing systemic psychological stress and burnout — CHROs must lead with transparency, empathy and proactive well-being strategies" },
+        { zh: "AI导致的技能侵蚀已成现实威胁：过度依赖AI输出使员工批判性思维、写作与判断能力加速退化，HR须主动设计「技能保护」机制", en: "Skill erosion from AI reliance is real: over-dependence on AI outputs is accelerating decay of critical thinking, writing, and judgment — HR must proactively design skill preservation" },
+        { zh: "CHRO须制定「当下-未来」双轨人才策略：明确12个月内最大化现有人才产出的路径，以及未来1-3年通过AI重构人才结构的进化路径", en: "CHROs must build a 'now-next' talent strategy: maximize existing talent output in 12 months, while planning AI-driven talent structure transformation over 1–3 years" }
+      ]
+    },
+    {
+      id: "mckinsey-superagency-workplace-2025",
+      title: "Superagency in the Workplace: Empowering People to Unlock AI's Full Potential",
+      source: "McKinsey",
+      date: "2025-01",
+      category: "org-impact",
+      lang: "en",
+      url: "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/superagency-in-the-workplace-empowering-people-to-unlock-ais-full-potential-at-work",
+      summary: "麦肯锡2025职场AI报告：C-suite与员工之间存在严重的AI认知鸿沟——管理层低估员工AI使用深度达3倍以上；92%企业计划增加AI投入，但仅1%已达成熟部署。AI真正的价值实现路径是赋予人与AI协作的「超级代理力」。",
+      key_insights: [
+        { zh: "C-suite与员工AI使用认知严重错位：高管估计仅4%员工深度使用AI，实际数字是13%；员工自主推进AI比领导层预期快3倍以上", en: "Critical C-suite/employee AI perception gap: executives estimate 4% of employees use AI deeply; the actual number is 13% — employees are self-adopting AI 3x faster than leaders expect" },
+        { zh: "92%企业计划加大AI投入，但仅1%认为自己已达成熟部署——大多数企业的AI应用仍停留在碎片化工具使用阶段，未实现工作流级集成", en: "92% of companies plan to increase AI investment, but only 1% consider deployment 'mature' — most firms remain at fragmented tool use, far from workflow-level integration" },
+        { zh: "48%员工将培训列为AI应用最重要因素，但近半数报告几乎未获任何AI培训——培训缺口是AI价值实现最大瓶颈，而非技术本身", en: "48% of employees rank training as the #1 factor for AI adoption, yet nearly half report receiving minimal or no AI training — the training gap, not technology, is the biggest bottleneck" }
+      ]
+    },
     {
       id: "coinbase-ai-workforce-restructure-2026",
       title: "Coinbase Cuts 14% of Workforce, Replaces Managers with 'Player-Coaches' in AI-Era Restructuring",
