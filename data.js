@@ -1,8 +1,98 @@
 // AI 组织洞察数据 · 每日自动更新
-// 由 Claude AI 搜索并提炼，最后更新：2026-05-11
+// 由 Claude AI 搜索并提炼，最后更新：2026-05-15
 const ARTICLES_DATA = {
-  last_updated: "2026-05-11",
+  last_updated: "2026-05-15",
   articles: [
+    {
+      id: "cisco-ai-layoffs-record-revenue-2026",
+      title: "Cisco Cuts 4,000 Jobs at Record Revenue — AI Infrastructure Orders Surged to $5.3B",
+      source: "TechCrunch",
+      date: "2026-05",
+      category: "best-practice",
+      lang: "en",
+      url: "https://techcrunch.com/2026/05/14/cisco-cuts-nearly-4000-jobs-to-spend-more-on-ai-reports-record-quarterly-revenue/",
+      summary: "Cisco在创纪录季度营收（$158亿，+12% YoY）的同时裁减近4,000名员工，AI基础设施订单年内飙升至$53亿——将节省的人力成本直接转化为硅芯片、光学与AI安全等核心AI基础设施投入，成为科技基础设施向AI时代战略迁移的标杆案例。",
+      key_insights: [
+        { zh: "Cisco在历史最高季收（$158亿，+12% YoY）下裁减近4,000人——AI驱动减员与高速增长并行，印证「AI时代精简≠业绩困难」的新范式", en: "Cisco cut ~4,000 jobs at record Q3 revenue ($15.8B, +12% YoY) — AI-driven reduction and strong growth coexist, confirming the new paradigm: lean ≠ distress" },
+        { zh: "AI基础设施订单年内达$53亿，全年预期$90亿（较原预测翻近一倍）——裁员节省的人力成本被直接转化为硅芯片、光学与AI安全能力投资", en: "AI infra orders hit $5.3B YTD, FY2026 guidance raised to ~$9B (nearly double prior estimate) — headcount savings are directly reinvested into silicon, optics, and AI security capabilities" },
+        { zh: "Cisco战略重心从传统网络设备商转型为AI时代核心基础设施提供商，本次裁员是有序清理非AI方向人员、集中资源押注AI赛道的主动战略动作", en: "Cisco is strategically pivoting from traditional networking vendor to core AI infrastructure provider — the cuts are a deliberate resource reallocation, not a retreat" }
+      ]
+    },
+    {
+      id: "paypal-ai-workforce-20pct-2026",
+      title: "PayPal to Cut 20% of Workforce Over 2–3 Years as New CEO Declares 'Becoming a Tech Company Again'",
+      source: "TechCrunch",
+      date: "2026-05",
+      category: "best-practice",
+      lang: "en",
+      url: "https://techcrunch.com/2026/05/05/paypal-says-its-becoming-a-technology-company-again-that-means-ai/",
+      summary: "PayPal新任CEO宣布分阶段裁减20%员工（约4,760人），目标节省$15亿以上运营成本，将资源集中投入AI工程化转型——宣言「重新成为科技公司」，代表金融科技行业大规模AI驱动组织重构的开端。",
+      key_insights: [
+        { zh: "PayPal新CEO宣布2-3年内裁减20%（约4,760人），目标节省$15亿运营成本，将资源集中投入AI开发流程整合与云原生架构——金融科技最大规模AI驱动重组", en: "New PayPal CEO announced 20% cuts (~4,760 roles) over 2–3 years targeting $1.5B+ in savings, redirecting toward AI development and cloud-native architecture — largest AI-driven fintech restructuring of 2026" },
+        { zh: "CEO明确定性：PayPal正「重新成为科技公司」——AI将全面融入开发流程，大幅提升工程师产出效率并缩短产品上市周期", en: "CEO explicitly positioned it as PayPal 'becoming a technology company again' — AI will be embedded across engineering to boost developer productivity and compress time-to-market" },
+        { zh: "Fintech行业AI重组浪潮加速：2026年Coinbase（-14%）、Block（-4,000人）、PayPal（-20%）相继重构，传统金融科技的人员密集型运营模式正被AI驱动的精简架构系统性取代", en: "Fintech AI restructuring wave accelerates: Coinbase (-14%), Block (-4,000), PayPal (-20%) all restructured in 2026 — labor-intensive fintech operating models are being systematically replaced by AI-native lean architectures" }
+      ]
+    },
+    {
+      id: "stanford-ai-index-2026-economy",
+      title: "Stanford AI Index 2026: Early-Career Software Developers Down 20%, One-Third of Employers Plan Further Cuts",
+      source: "Stanford HAI",
+      date: "2026-04",
+      category: "org-impact",
+      lang: "en",
+      url: "https://hai.stanford.edu/ai-index/2026-ai-index-report/economy",
+      summary: "斯坦福HAI 2026 AI指数经济篇：AI对劳动力市场的冲击已呈现结构性分化——22-25岁软件开发者就业率较2024年下降近20%，而中高级同类人才基本持稳；70%组织已在至少一个职能中使用生成式AI；三分之一雇主预计未来一年将缩减人员。",
+      key_insights: [
+        { zh: "AI对就业的冲击呈「哑铃型分化」：22-25岁软件开发者就业率较2024年下降近20%，中高级岗位基本持稳——初级白领岗位正被AI系统性压缩", en: "AI job impact is bimodal: entry-level software developers (22–25) employment fell ~20% vs 2024 while mid/senior roles held — junior white-collar roles are being systematically compressed" },
+        { zh: "生成式AI已进入70%企业至少一个职能部门；美国年度消费者剩余达$1,720亿，较上年增长约54%——AI经济价值正快速兑现", en: "GenAI is used in at least one function at 70% of organizations; U.S. annual consumer surplus hit $172B, up ~54% YoY — AI economic value is accelerating rapidly" },
+        { zh: "专家与公众对AI就业影响的认知鸿沟达50个百分点（73% vs 23%积极预期）；三分之一雇主预计未来一年将缩减人员编制", en: "Expert vs. public perception gap on AI job impact: 73% vs. 23% positive — a 50-point divide; one-third of employers expect workforce reductions in the coming year" }
+      ]
+    },
+    {
+      id: "deloitte-human-capital-trends-2026",
+      title: "Deloitte 2026 Global Human Capital Trends: From Tensions to Tipping Points",
+      source: "Deloitte",
+      date: "2026-01",
+      category: "both",
+      lang: "en",
+      url: "https://www.deloitte.com/us/en/insights/topics/talent/human-capital-trends.html",
+      summary: "德勤2026全球人力资本趋势：人机协作已到临界点——60%高管已用AI辅助决策，但仅6%组织在人机交互设计上取得实质进展；65%企业认为文化需因AI而根本性变革；胜出路径是建立「人的优势」——以判断力与创造力驾驭AI，而非简单地被AI替代。",
+      key_insights: [
+        { zh: "60%高管已将AI纳入常规决策支持，但仅6%的组织在设计有效人机协作交互上取得实质进展——技术部署与组织适配之间存在巨大裂口", en: "60% of executives regularly use AI for decisions, but only 6% of organizations report meaningful progress in human-AI interaction design — a massive gap between deployment and adaptation" },
+        { zh: "65%企业承认文化须因AI而根本性变革，34%认为现有文化正在主动阻碍AI目标的实现——文化惰性已成AI转型的最大软性壁垒", en: "65% of orgs believe culture needs fundamental change due to AI; 34% say their current culture actively inhibits AI goals — cultural inertia is the largest soft barrier to AI transformation" },
+        { zh: "德勤判断：可持续竞争优势来自「人的优势」——在AI处理速度与规模的基础上，以人的判断力、价值观与创造力驾驭决策；未来由价值观与勇气定义，而非技术本身", en: "Sustainable advantage comes from the 'human edge' — judgment, values, and creativity built atop AI speed and scale; the future will be defined by values and courage, not technology alone" }
+      ]
+    },
+    {
+      id: "shrm-state-of-ai-hr-2026",
+      title: "SHRM State of AI in HR 2026: 67% of HR Leaders Don't Know What AI Can Do",
+      source: "SHRM",
+      date: "2026-01",
+      category: "hr-transform",
+      lang: "en",
+      url: "https://www.shrm.org/topics-tools/research/state-of-ai-hr-2026",
+      summary: "SHRM基于1,908位HR专业人士的调研：AI在HR领域最大的阻碍不是技术，而是认知——67%HR负责人不清楚AI能做什么；92%的CHRO预期AI将进一步融入HR运营，但72%认为即便技术门槛消失，「人性化服务」偏好仍将阻止HR全面自动化。",
+      key_insights: [
+        { zh: "HR领域AI落地最大障碍是「认知缺口」而非技术：67%的HR负责人不清楚AI能在哪些场景提供帮助——这也是最容易通过教育消除的障碍", en: "The #1 AI adoption barrier in HR is an awareness gap, not technology: 67% of HR leaders don't know what AI can do for them — also the easiest barrier to remove through education" },
+        { zh: "即便技术门槛全部消失，72%的HR专业人士仍认为「员工更偏好人性化服务」将阻止HR完全自动化——人的判断与共情是HR不可替代的核心价值", en: "Even if all technical barriers vanished, 72% of HR professionals believe customer preference for human touch would still prevent full HR automation — empathy and judgment remain irreplaceable" },
+        { zh: "已采用AI的企业中，57%为员工提供频繁的技能提升机会，仅7%报告AI直接导致岗位消失——AI在HR中的主流影响是重构而非替代", en: "Among AI-adopting organizations, 57% offer frequent upskilling; only 7% report AI-driven job displacement — the dominant impact of AI in HR is role redesign, not displacement" }
+      ]
+    },
+    {
+      id: "bersin-superworker-organization-2026",
+      title: "The Superworker Organization: AI Goes Enterprise — Josh Bersin 2026 Imperatives",
+      source: "Josh Bersin",
+      date: "2026-01",
+      category: "both",
+      lang: "en",
+      url: "https://joshbersin.com/imperatives/",
+      summary: "Josh Bersin 2026年度核心框架：「超级员工组织」——AI赋能使个体生产力提升数量级，HR核心编制可能缩减30%以上；企业须同步重构五大运营支柱：组织模型、人才策略、薪酬体系、领导力文化与HR本身的AI化转型。",
+      key_insights: [
+        { zh: "「超级员工」定义：被AI充分赋能的员工，可实现数量级的生产力、创造力与服务质量提升——核心不是替代人，而是让少数人做更大量的工作", en: "The 'Superworker' — an AI-empowered employee who delivers orders-of-magnitude gains in productivity, creativity, and service — the core shift is doing vastly more with fewer people" },
+        { zh: "随AI超级代理接管HR运营，核心HR编制可能缩减30%以上——但这是角色重构而非单纯裁员：部分岗位消失，更多新岗位将涌现", en: "As AI superagents take over HR operations, core HR headcount could fall 30%+ — but this is role restructuring, not pure displacement: some roles disappear, many new ones will emerge" },
+        { zh: "企业2026年五大必做：①重设以客户结果为导向的组织模型；②建立人才动态流动机制；③按技能与产出而非职级重构薪酬；④锻造拥抱创新的领导力文化；⑤让HR团队本身率先实现AI转型", en: "Five 2026 imperatives: ①Redesign org for customer outcomes ②Enable dynamic talent mobility ③Rethink pay by skills/outputs ④Build innovation-embracing leadership ⑤Make HR the AI transformation vanguard" }
+      ]
+    },
     {
       id: "cloudflare-ai-layoffs-record-revenue-2026",
       title: "Cloudflare Cuts 20% of Workforce Citing AI — Despite Hitting Record $640M Revenue",
