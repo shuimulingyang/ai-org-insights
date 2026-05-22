@@ -1,8 +1,68 @@
 // AI 组织洞察数据 · 每日自动更新
-// 由 Claude AI 搜索并提炼，最后更新：2026-05-15
+// 由 Claude AI 搜索并提炼，最后更新：2026-05-21
 const ARTICLES_DATA = {
-  last_updated: "2026-05-15",
+  last_updated: "2026-05-21",
   articles: [
+    {
+      id: "gartner-people-centric-ai-talent-2026",
+      title: "Gartner: By 2027, 50% of Enterprises Without a People-Centric AI Strategy Will Lose Top AI Talent",
+      source: "Gartner",
+      date: "2026-05",
+      category: "hr-transform",
+      lang: "en",
+      url: "https://www.gartner.com/en/newsroom/press-releases/2026-05-13-gartner-predicts-by-2027-50-percent-of-enterprises-without-a-people-centric-ai-strategy-will-lose-their-top-ai-talent",
+      summary: "Gartner最新预测：到2027年，未建立「以人为中心AI策略」的企业中有50%将流失顶尖AI人才。调研同时揭示一个结构性盲区：HR普遍忽视了管理者在推动AI有效落地中的关键角色——仅7%的企业为员工提供「AI节省时间后如何使用」的指导方针。",
+      key_insights: [
+        { zh: "Gartner预测：到2027年，无「以人为中心AI策略」的企业中50%将流失顶级AI人才——AI人才争夺战的核心变量已从薪酬转向组织是否以人为本地推进AI", en: "Gartner predicts: by 2027, 50% of enterprises without a people-centric AI strategy will lose their top AI talent — the key variable in AI talent competition has shifted from pay to people-centric AI design" },
+        { zh: "HR普遍忽视了管理者在AI落地中的关键角色：46%管理者在主动探索AI（vs 26%员工），但多数组织未建立AI有效使用的明确预期与成果框架", en: "HR has systematically overlooked the manager's role: 46% of managers are experimenting with AI (vs 26% of employees), yet most orgs have no clear expectations or outcome frameworks for effective AI use" },
+        { zh: "仅7%的企业为员工提供「AI节省时间后如何重新部署」的指导——大多数组织只实现了碎片化时间节省，未能将AI效率转化为可见的组织价值", en: "Only 7% of organizations provide guidelines on how to redeploy time saved by AI — most orgs see only fragmented time savings, never converting AI efficiency into visible organizational value" }
+      ]
+    },
+    {
+      id: "deloitte-state-of-ai-enterprise-2026",
+      title: "Deloitte State of AI in the Enterprise 2026: From Ambition to Activation — The Untapped Edge",
+      source: "Deloitte",
+      date: "2026-03",
+      category: "org-impact",
+      lang: "en",
+      url: "https://www.deloitte.com/us/en/about/press-room/state-of-ai-report-2026.html",
+      summary: "德勤基于24个国家3,235位商业与IT领导者的调研：AI工具普及率一年内从40%跃升至60%，但企业正分化为三类——深度变革（34%）、流程重设（30%）、浅层使用（37%）。74%期望AI带来收入增长，但仅20%正在实现。AI技能缺口成为整合的最大障碍。",
+      key_insights: [
+        { zh: "AI工具访问权限一年内扩展50%（从40%→60%员工），但企业呈三级分化：34%深度变革、30%流程重设、37%浅层使用——「跑通工具」与「重塑业务」之间存在巨大鸿沟", en: "AI tool access expanded 50% in one year (40%→60% of workers), but firms split three ways: 34% deeply transforming, 30% redesigning processes, 37% surface-level — a massive gap between access and transformation" },
+        { zh: "74%企业期望AI驱动收入增长，但仅20%正在实现——AI价值从「实验室」到「P&L」的转化仍是绝大多数企业面临的核心挑战", en: "74% of organizations hope to grow revenue via AI in the future, but only 20% are already doing so — converting AI from experiment to P&L impact remains the defining challenge" },
+        { zh: "AI技能缺口是企业落地最大障碍（排名第一）；高层主动参与AI治理的企业比将治理下放给技术团队的企业实现了显著更高的业务价值", en: "The AI skills gap is the #1 integration barrier; enterprises where senior leadership actively shapes AI governance achieve significantly greater business value than those delegating to technical teams" }
+      ]
+    },
+    {
+      id: "intuit-ai-layoffs-anthropic-openai-2026",
+      title: "Intuit Cuts 17% of Workforce, Signs Dual AI Deals With Anthropic and OpenAI",
+      source: "PYMNTS",
+      date: "2026-05",
+      category: "best-practice",
+      lang: "en",
+      url: "https://www.pymnts.com/business/2026/intuit-to-cut-17percent-of-workforce-in-shift-toward-ai/",
+      summary: "Intuit宣布裁减17%员工（约3,000人），同步与Anthropic和OpenAI分别签署多年期AI合作协议，将两家公司的模型嵌入产品。CEO的叙事管理颇具张力：他明确表示裁员「与AI无关」，理由是简化组织层级——但市场的解读是AI正在替代传统岗位。",
+      key_insights: [
+        { zh: "Intuit裁减17%（约3,000人），同步与Anthropic和OpenAI各签多年期AI合作协议——将外部顶级AI模型直接嵌入产品，是用「买AI能力」替代「养人力」的典型路径", en: "Intuit cut 17% (~3,000 roles) while signing multi-year deals with both Anthropic and OpenAI — embedding top AI models directly into products is the archetypal 'buy AI capability, not headcount' strategy" },
+        { zh: "CEO叙事策略：明确声称裁员「与AI无关」，理由是简化组织复杂度——但同期宣布双路AI合作，市场普遍解读为AI替代信号，揭示企业AI裁员的公关叙事困境", en: "CEO narrative strategy: explicitly claimed cuts 'had nothing to do with AI,' citing org simplification — while announcing dual AI partnerships simultaneously; reveals the PR narrative dilemma of AI-era workforce reduction" },
+        { zh: "Fintech行业「去人力化」趋势加速：2026年Coinbase、Block、PayPal、Intuit相继完成大规模重构，合计减少超过12,000个职位，金融科技正从人员密集型服务商向AI原生平台系统性转型", en: "Fintech 'de-humanization' accelerates: Coinbase, Block, PayPal, Intuit all restructured in 2026, removing 12,000+ roles combined — fintech is systemically transitioning from labor-intensive services to AI-native platforms" }
+      ]
+    },
+    {
+      id: "gartner-managers-ai-expectations-2026",
+      title: "Gartner HR Survey: Only 45% of Managers Say AI Lived Up to Expectations — and Just 7% Know What to Do With the Time Saved",
+      source: "Gartner",
+      date: "2026-03",
+      category: "hr-transform",
+      lang: "en",
+      url: "https://www.gartner.com/en/newsroom/press-releases/2026-3-4-gartner-hr-survey-reveals-45-percent-of-managers-report-ai-has-lived-up-to-their-expectations",
+      summary: "Gartner HR调研揭示AI落地的「最后一公里」问题：仅45%管理者认为AI达到了提升团队工作的预期；仅14%管理者表示在推动团队有效使用AI时不面临任何挑战；而仅7%的企业提供了AI节省时间后如何重新分配的指导——AI效率红利正在被大量消耗在碎片化、无方向的时间池中。",
+      key_insights: [
+        { zh: "仅45%管理者认为AI达到了改善团队工作的预期，86%面临推动团队有效使用AI的挑战——AI工具到位≠AI价值到位，管理者能力是关键瓶颈", en: "Only 45% of managers say AI lived up to expectations in improving team work; 86% face challenges driving effective AI use — tool availability ≠ value delivery; manager capability is the key bottleneck" },
+        { zh: "仅7%企业提供「AI节省时间后如何重新部署」的指导——大多数员工节省了碎片化时间却不知道用于何处，AI效率红利被大量浪费在无方向的空白时间中", en: "Only 7% of organizations guide employees on how to redeploy AI-saved time — most workers gain fragmented minutes with no direction; the AI efficiency dividend is largely squandered in aimless idle time" },
+        { zh: "管理者是AI落地的核心杠杆而非HR的盲区：46%管理者在主动探索AI（vs 26%员工），HR须从「赋能员工」转向「赋能管理者驱动团队AI转型」", en: "Managers are the key leverage point for AI adoption, not an HR blind spot: 46% of managers actively explore AI (vs 26% of employees) — HR must shift from empowering individuals to empowering managers to drive team-level AI transformation" }
+      ]
+    },
     {
       id: "cisco-ai-layoffs-record-revenue-2026",
       title: "Cisco Cuts 4,000 Jobs at Record Revenue — AI Infrastructure Orders Surged to $5.3B",
