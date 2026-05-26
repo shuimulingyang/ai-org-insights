@@ -1,8 +1,53 @@
 // AI 组织洞察数据 · 每日自动更新
-// 由 Claude AI 搜索并提炼，最后更新：2026-05-21
+// 由 Claude AI 搜索并提炼，最后更新：2026-05-22
 const ARTICLES_DATA = {
-  last_updated: "2026-05-21",
+  last_updated: "2026-05-22",
   articles: [
+    {
+      id: "oracle-30000-layoffs-ai-infrastructure-2026",
+      title: "Oracle Cuts 30,000 Jobs — Largest Single-Day Reduction in Company History — to Fund $156B AI Data Center Buildout",
+      source: "The Next Web",
+      date: "2026-03",
+      category: "best-practice",
+      lang: "en",
+      url: "https://thenextweb.com/news/oracle-layoffs-march-2026",
+      summary: "Oracle于2026年3月31日单日裁减30,000名员工（18%），创公司历史最大单日减员纪录。裁员释放年均$80-100亿现金流，直接注入AI云基础设施建设——最重磅的人力成本→AI基础设施转换案例，被外界称为「用人头换算力」的极端版本。",
+      key_insights: [
+        { zh: "Oracle单日裁减30,000人（18%），为公司史上最大单日减员——裁员本质是财务工程：释放$80-100亿年均现金流，直接转化为AI数据中心与云基础设施投入", en: "Oracle cut 30,000 jobs (18%) in a single day — the company's largest single-day reduction ever; the cut is financial engineering: freeing $8–10B annual cash flow for AI data centers and cloud infrastructure" },
+        { zh: "重灾区精准指向非AI核心业务：Cerner医疗、ERP咨询与旧版云运维被大幅压缩；AI数据中心与Stargate项目团队完全豁免并持续扩招", en: "Cuts precisely targeted non-AI-core units: Cerner/Oracle Health, ERP consulting, and legacy cloud ops were hit hardest; AI data center and Stargate project teams were fully spared and actively hiring" },
+        { zh: "Oracle模式代表「人力→算力」置换的极端版本：$21亿重组计划+$300亿债务融资同步进行，将传统软件公司的人力密集型架构强制转型为AI基础设施平台", en: "Oracle's approach represents the extreme version of 'headcount→compute' substitution: $2.1B restructuring + $30B in new debt financing simultaneously, forcibly pivoting a labor-intensive software company into an AI infrastructure platform" }
+      ]
+    },
+    {
+      id: "mckinsey-human-ai-workforce-agents-robots-2026",
+      title: "McKinsey MGI: Agents, Robots, and Us — AI Can Automate 57% of U.S. Work Hours, But Partnership Is the Path Forward",
+      source: "McKinsey",
+      date: "2026-05",
+      category: "org-impact",
+      lang: "en",
+      url: "https://www.mckinsey.com/mgi/our-research/agents-robots-and-us-skill-partnerships-in-the-age-of-ai",
+      summary: "麦肯锡全球研究院最新报告：AI代理与机器人已可自动化超过57%的美国工作时间，但这不意味着岗位消失——而是意味着「人机技能伙伴关系」的全面重构。到2030年AI可释放约$2.9万亿年度经济价值，但实现路径取决于工作流重设计与人的技能迭代速度。",
+      key_insights: [
+        { zh: "AI代理与机器人已可自动化57%以上的美国工作时间——但超过70%的技能在「可自动化」与「不可自动化」工作中同时存在，技能共享性使人机协作成为主流而非单纯替代", en: "AI agents and robots can already automate 57%+ of U.S. work hours — but 70%+ of skills overlap between automatable and non-automatable work; skill shareability makes human-AI partnership the dominant pattern, not replacement" },
+        { zh: "AI流利度需求在两年内增长近7倍，成为增速最快的技能类别；沟通、客户关系、写作、解决问题与领导力等8项核心技能跨行业保持高度相关性", en: "Demand for AI fluency grew nearly 7x in just two years — the fastest-growing skill category; 8 core skills including communication, customer relations, writing, problem-solving, and leadership remain highly relevant across industries" },
+        { zh: "到2030年AI可释放约$2.9万亿年均美国经济价值——但价值实现的关键不是技术突破，而是组织如何重设工作流以及人的技能迭代速度能否跟上", en: "AI could generate ~$2.9T in annual US economic value by 2030 — but realization depends less on tech breakthroughs than on how orgs redesign workflows and how fast human skills can adapt" }
+      ]
+    },
+    {
+      id: "mckinsey-ai-productivity-performance-paradox-2026",
+      title: "McKinsey: The AI Performance Paradox — Where AI Creates Value and Where It Won't",
+      source: "McKinsey",
+      date: "2026-05",
+      category: "org-impact",
+      lang: "en",
+      url: "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/where-ai-will-create-value-and-where-it-wont",
+      summary: "麦肯锡深度分析AI价值创造的「悖论」：企业AI工具使用率大幅提升，但整体生产率数据并未同步改善。核心原因是「扩散陷阱」——AI效益分散在个体效率提升中，而非转化为系统级竞争优势。真正实现AI价值的企业，聚焦于端到端流程再造而非工具叠加。",
+      key_insights: [
+        { zh: "AI生产率悖论：工具使用率大幅提升，但整体生产率数据未同步改善——核心原因是AI收益分散在个体层面，未能聚合为组织级竞争优势与可见的财务影响", en: "The AI productivity paradox: tool usage soars but aggregate productivity data doesn't follow — because AI gains are diffused at the individual level and never aggregated into org-level competitive advantage or financial impact" },
+        { zh: "AI在特定领域创造巨大价值（软件工程、内容生成、客服自动化），但在需要跨职能判断、客户关系管理与战略决策的领域价值有限——并非所有工作都能被AI等比例提效", en: "AI creates massive value in specific domains (software engineering, content generation, CS automation) but limited value in cross-functional judgment, relationship management, and strategic decisions — not all work benefits equally" },
+        { zh: "真正实现AI价值的企业聚焦于「端到端流程再造」而非工具叠加：将AI嵌入完整业务流程、重设角色边界、建立人机协作协议，而非在现有流程上简单叠加AI工具", en: "Firms that actually realize AI value focus on end-to-end process redesign, not tool stacking: embedding AI into full workflows, resetting role boundaries, and building human-AI collaboration protocols — not adding AI on top of existing processes" }
+      ]
+    },
     {
       id: "gartner-people-centric-ai-talent-2026",
       title: "Gartner: By 2027, 50% of Enterprises Without a People-Centric AI Strategy Will Lose Top AI Talent",
