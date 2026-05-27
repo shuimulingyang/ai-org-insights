@@ -1,8 +1,38 @@
 // AI 组织洞察数据 · 每日自动更新
-// 由 Claude AI 搜索并提炼，最后更新：2026-05-22
+// 由 Claude AI 搜索并提炼，最后更新：2026-05-27
 const ARTICLES_DATA = {
-  last_updated: "2026-05-22",
+  last_updated: "2026-05-27",
   articles: [
+    {
+      id: "gartner-ai-layoffs-no-roi-2026",
+      title: "Gartner: AI-Driven Layoffs Create Budget Room, But Do NOT Deliver Returns",
+      source: "Gartner",
+      date: "2026-05",
+      category: "org-impact",
+      lang: "en",
+      url: "https://www.gartner.com/en/newsroom/press-releases/2026-05-05-gartner-says-autonomous-business-and-artificial-intelligence-layoffs-may-create-budget-room-but-do-not-deliver-returns",
+      summary: "Gartner调研350家年收入$10亿+企业发现：80%自动化试点企业已缩减人员，但裁员率与AI ROI高低之间没有相关性——高回报企业不是那些消灭人力的企业，而是那些放大人力的企业。「裁员释放预算，但不创造回报」是今年最重要的反叙事研究结论。",
+      key_insights: [
+        { zh: "核心反叙事：AI裁员与AI回报之间无正相关——高ROI企业与低ROI企业的裁员比例几乎相同，「裁员换AI回报」的CEO逻辑被数据证伪", en: "Core counter-narrative: AI layoffs and AI ROI are uncorrelated — high-ROI and low-ROI firms cut headcount at nearly identical rates; the CEO logic of 'cut staff to fund AI returns' is empirically falsified" },
+        { zh: "Gartner明确结论：「裁员创造预算空间，但不创造回报」——真正提升ROI的企业是那些放大人机协作能力的企业，而非消灭人力的企业", en: "Gartner's explicit conclusion: 'Workforce reductions create budget room, but not return' — firms that improve ROI are those that amplify human-AI collaboration, not those that eliminate the need for people" },
+        { zh: "AI代理软件支出2026年达$2,065亿、2027年将达$3,763亿；Gartner预测2028-2029年AI将成为净就业创造者——前提是企业主动在技能、角色与运营模式上投资", en: "AI agent software spend: $206.5B in 2026, $376.3B in 2027; Gartner predicts AI becomes a net job creator by 2028–29 — contingent on orgs proactively investing in skills, roles, and operating models" }
+      ]
+    },
+    {
+      id: "gartner-ai-creates-more-jobs-2028",
+      title: "Gartner: AI Will Create More Jobs Than It Eliminates Beginning in 2028 — But 32 Million Jobs/Year Must Be Reconfigured",
+      source: "Gartner",
+      date: "2026-05",
+      category: "org-impact",
+      lang: "en",
+      url: "https://www.gartner.com/en/newsroom/press-releases/2026-05-13-gartner-hr-research-reveals-ai-will-create-more-jobs-than-it-eliminates-beginning-in-2028",
+      summary: "Gartner 2026年5月最新HR研究：从2028年起AI净创造就业将超过净消灭就业——但过渡期将打断数百万人的职业路径，每年需重新配置3,200万个岗位、每天15万个职位需技能升级、另有7万个职位需根本性重写。以技能为基础的职业发展路径是企业应对这一转型的核心战略。",
+      key_insights: [
+        { zh: "从2028年起AI将成为净就业创造者——但「增量好于存量」的整体乐观掩盖了剧烈的结构性转型：每年需重新配置3,200万个岗位，每天15万职位靠技能升级演化，7万职位需根本性重写", en: "AI becomes a net job creator from 2028 — but the aggregate optimism masks intense structural disruption: 32M jobs/year need reconfiguration; 150,000 jobs daily evolve via upskilling; 70,000 need fundamental rewriting" },
+        { zh: "当前过渡期将「打断数百万人的职业路径」——这不是企业转型叙事，而是对个体职业生命周期的系统性冲击，HR须主动重建基于技能而非经验年限的职业晋升路径", en: "The current transition 'will break down millions of careers' — not an org transformation narrative, but a systemic shock to individual career lifecycles; HR must proactively rebuild skill-based (not tenure-based) career advancement" },
+        { zh: "40%组织已淘汰过时岗位，近半已向跨职能敏捷团队重组——但技能供给跟不上重构需求，现在建立技能通道的企业将在AI驱动增长加速时率先占据人才优势", en: "40% of orgs have eliminated outdated roles; ~50% have restructured toward cross-functional agile teams — but skill supply lags reconfiguration demand; firms building skill pipelines now will have first-mover talent advantage when AI growth accelerates" }
+      ]
+    },
     {
       id: "oracle-30000-layoffs-ai-infrastructure-2026",
       title: "Oracle Cuts 30,000 Jobs — Largest Single-Day Reduction in Company History — to Fund $156B AI Data Center Buildout",
