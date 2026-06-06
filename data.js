@@ -1,8 +1,53 @@
 // AI 组织洞察数据 · 每日自动更新
-// 由 Claude AI 搜索并提炼，最后更新：2026-05-27
+// 由 Claude AI 搜索并提炼，最后更新：2026-06-06
 const ARTICLES_DATA = {
-  last_updated: "2026-05-27",
+  last_updated: "2026-06-06",
   articles: [
+    {
+      id: "accenture-ai-layoffs-agentic-training-2026",
+      title: "Accenture Cuts 11,000 While Training 70,000 in Agentic AI — 'Reskilling Is Not Viable for Some Roles'",
+      source: "Tech.co",
+      date: "2026-05",
+      category: "best-practice",
+      lang: "en",
+      url: "https://tech.co/news/accenture-layoffs-ai-pivot",
+      summary: "全球最大咨询公司Accenture裁减11,000人（$8.65亿重组成本），CEO明确表示「部分岗位的重新培训不是可行路径」；同时投入大量资源将70,000名员工培训为代理AI（Agentic AI）专家。咨询行业自身正在被AI颠覆，这是该行业最具象征意义的案例。",
+      key_insights: [
+        { zh: "Accenture裁减11,000人，CEO直接宣告「部分人的技能重塑不是可行路径」——这是大型企业首次在公开声明中承认并非所有员工都能完成AI转型，打破了「AI只是重构而非替代」的叙事", en: "Accenture cut 11,000 with CEO stating reskilling 'is not a viable path for some roles' — the first major firm to publicly acknowledge not everyone can make the AI transition, breaking the 'reshape not replace' narrative" },
+        { zh: "同步将70,000名员工训练为代理AI专家——「裁旧人+培新能力」双轨并行，代表咨询行业AI转型的典型路径：精准淘汰不可转型角色、规模化升级核心人才", en: "Simultaneously trained 70,000 employees in agentic AI — running 'cut old roles + build new capabilities' in parallel; this dual-track approach is the consulting industry's AI transformation template" },
+        { zh: "咨询行业正被其自身一直在兜售的AI转型所颠覆：Accenture的商业模式依赖大量中层顾问交付项目，而AI代理正在接管这一核心交付层，咨询业人力密集型模式面临根本性冲击", en: "Consulting is being disrupted by the AI transformation it has long sold to clients: Accenture's model relies on mid-level consultants for delivery — AI agents are taking over that core layer, hitting consulting's labor-intensive model at its foundation" }
+      ]
+    },
+    {
+      id: "tech-layoffs-142k-700b-ai-capex-2026",
+      title: "2026 Tech Layoffs Hit 142,000 as Profitable Companies Fund $700B AI Infrastructure with Headcount Savings",
+      source: "TechTimes",
+      date: "2026-05",
+      category: "org-impact",
+      lang: "en",
+      url: "https://www.techtimes.com/articles/317392/20260529/tech-layoffs-reach-142000-2026-profitable-companies-cut-jobs-fund-700b-ai-infrastructure.htm",
+      summary: "截至2026年5月，科技行业已裁减142,000名员工，平均每天868人失业——而这些裁员并非来自经营困难的企业，而是来自盈利能力强劲的公司。四大超大规模云厂商（Amazon、Microsoft、Alphabet、Meta）2026年合计AI资本支出承诺达$7,000亿，几乎是2025年的两倍。",
+      key_insights: [
+        { zh: "2026年科技行业已裁减142,000人（日均868人），创历史纪录的裁员潮来自盈利企业而非困难企业——「高利润+大裁员」模式成为AI时代的新常态", en: "142,000 tech jobs cut in 2026 (avg. 868/day) — the historic layoff wave comes from highly profitable companies, not struggling ones; 'strong margins + big cuts' is the new AI-era normal" },
+        { zh: "四大超规模云厂商2026年合计AI资本支出$7,000亿（Amazon、Microsoft、Alphabet、Meta），几乎是2025年的两倍——人力成本节省被直接转化为算力基础设施投资，形成「人头换算力」的系统性置换", en: "The four hyperscalers committed $700B in AI capex for 2026 (nearly double 2025) — headcount savings are systematically redirected into compute infrastructure; this is 'people to compute' substitution at civilizational scale" },
+        { zh: "裁员已超过20,000人/月（2026年仅4月除外）；咨询、金融科技、云基础设施、电商等多行业同步进行AI重组，AI驱动减员正从科技行业向全产业快速蔓延", en: "Cuts exceeded 20,000/month in every month of 2026 except April; consulting, fintech, cloud infra, and e-commerce are all restructuring simultaneously — AI-driven workforce reduction is rapidly spreading beyond tech" }
+      ]
+    },
+    {
+      id: "wef-four-futures-jobs-ai-2030",
+      title: "WEF: Four Futures for Jobs in the New Economy — AI Creates 170M Roles, Displaces 92M by 2030",
+      source: "WEF",
+      date: "2025-01",
+      category: "org-impact",
+      lang: "en",
+      url: "https://reports.weforum.org/docs/WEF_Four_Futures_for_Jobs_in_the_New_Economy_AI_and_Talent_in_2030_2025.pdf",
+      summary: "世界经济论坛《2030年就业的四种未来》报告：AI到2030年将净创造约7,800万个岗位（创造1.7亿 vs 消灭9,200万）；最快增长领域为AI/数据科学、绿色技术、医疗与教育。技能优先于学历，AI技能可带来显著薪酬溢价；领导者的战略选择将决定转型是否包容。",
+      key_insights: [
+        { zh: "到2030年AI净创造约7,800万个岗位（新增1.7亿 vs 消灭9,200万），最快增长的新兴角色集中于AI/数据科学、网络安全、绿色技术、医疗与教育领域", en: "By 2030, AI will net-create ~78M jobs (170M created vs 92M displaced); fastest-growing roles concentrate in AI/data science, cybersecurity, green tech, healthcare, and education" },
+        { zh: "技能正在超越学历成为就业核心变量：掌握AI技能的员工可获得显著薪酬溢价，传统学历对科技岗位的预测力快速下降——「技能优先雇佣」将成为主流用人模式", en: "Skills are overtaking credentials as the core employment variable: AI skills command meaningful wage premiums; traditional degrees are declining as predictors of tech role readiness — skills-first hiring is becoming the dominant model" },
+        { zh: "50-55%的美国工作将被重塑而非消灭（vs 10-15%被替代）——但转型结果取决于领导者的战略选择：包容性再培训、负责任的AI落地与人才战略投入将决定组织能否顺利穿越转型期", en: "50–55% of U.S. jobs will be reshaped rather than eliminated (vs 10–15% replaced) — but outcomes depend on leadership choices: inclusive reskilling, responsible AI adoption, and strategic talent investment determine whether orgs navigate the transition or falter" }
+      ]
+    },
     {
       id: "gartner-ai-layoffs-no-roi-2026",
       title: "Gartner: AI-Driven Layoffs Create Budget Room, But Do NOT Deliver Returns",
