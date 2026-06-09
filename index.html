@@ -37,7 +37,7 @@
       background: #000;
       color: #fff;
       text-align: center;
-      padding: 40px 24px 36px;
+      padding: 22px 24px 36px;
     }
     .hero-eyebrow {
       font-size: 11px;
@@ -317,7 +317,7 @@
     footer a { color: var(--accent); text-decoration: none; }
 
     @media (max-width: 640px) {
-      .hero { padding: 28px 16px 24px; }
+      .hero { padding: 14px 16px 24px; }
       .hero h1 { white-space: normal; font-size: 22px; }
       .stats-inner { flex-wrap: wrap; }
       .stat { padding: 14px 16px; }
@@ -327,6 +327,49 @@
   </style>
 </head>
 <body>
+
+<!-- ── KYLE'S AI LAB GLOBAL NAV ── -->
+<style>
+  .klab-nav { position:sticky;top:0;z-index:999;background:#000;height:44px;display:flex;align-items:center;padding:0 24px;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.08);-webkit-font-smoothing:antialiased; }
+  .klab-nav-brand { font-size:14px;font-weight:600;color:#fff;text-decoration:none;letter-spacing:-0.01em;white-space:nowrap; }
+  .klab-nav-brand:hover { color:rgba(255,255,255,.75); }
+  .klab-nav-links { display:flex;align-items:center;gap:4px;list-style:none; }
+  .klab-nav-links a { font-size:13px;font-weight:500;color:rgba(255,255,255,.65);text-decoration:none;padding:6px 12px;border-radius:8px;transition:color .15s,background .15s; }
+  .klab-nav-links a:hover { color:#fff;background:rgba(255,255,255,.1); }
+  .klab-nav-links a.klab-active { color:#fff;background:rgba(255,255,255,.12); }
+  .klab-hamburger { display:none;background:none;border:none;cursor:pointer;padding:4px;color:rgba(255,255,255,.8); }
+  @media(max-width:540px){
+    .klab-hamburger{display:flex;}
+    .klab-nav-links{display:none;position:absolute;top:44px;left:0;right:0;background:#111;flex-direction:column;align-items:flex-start;gap:0;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1);}
+    .klab-nav-links.open{display:flex;}
+    .klab-nav-links a{width:100%;padding:12px 24px;border-radius:0;font-size:15px;}
+  }
+</style>
+<nav class="klab-nav">
+  <a class="klab-nav-brand" href="https://shuimulingyang.github.io/">✦ Kyle's AI Lab</a>
+  <button class="klab-hamburger" id="klabMenuBtn" aria-label="Menu">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+    </svg>
+  </button>
+  <ul class="klab-nav-links" id="klabNavLinks">
+    <li><a href="https://shuimulingyang.github.io/ai-org-insights/" data-path="/ai-org-insights">AI 组织洞察</a></li>
+    <li><a href="https://shuimulingyang.github.io/ai-productivity/" data-path="/ai-productivity">AI 提效实践</a></li>
+    <li><a href="https://shuimulingyang.github.io/vibe-coding/" data-path="/vibe-coding">Vibe Coding</a></li>
+  </ul>
+</nav>
+<script>
+  (function(){
+    var p=window.location.pathname;
+    document.querySelectorAll('.klab-nav-links a[data-path]').forEach(function(a){
+      if(p.startsWith(a.dataset.path))a.classList.add('klab-active');
+    });
+    var btn=document.getElementById('klabMenuBtn');
+    var links=document.getElementById('klabNavLinks');
+    if(btn)btn.addEventListener('click',function(){links.classList.toggle('open');});
+  })();
+</script>
+<!-- ── END GLOBAL NAV ── -->
 
 <!-- HERO -->
 <header class="hero">
