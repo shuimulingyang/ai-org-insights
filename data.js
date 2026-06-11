@@ -1,8 +1,53 @@
 // AI 组织洞察数据 · 每日自动更新
-// 由 Claude AI 搜索并提炼，最后更新：2026-06-06
+// 由 Claude AI 搜索并提炼，最后更新：2026-06-11
 const ARTICLES_DATA = {
-  last_updated: "2026-06-06",
+  last_updated: "2026-06-11",
   articles: [
+    {
+      id: "gitlab-act2-agentic-restructuring-2026",
+      title: "GitLab 'Act 2': Flattening 8 Org Layers, Cutting 14% to Become an Agentic-AI Company",
+      source: "GitLab / Yahoo Finance",
+      date: "2026-06",
+      category: "best-practice",
+      lang: "en",
+      url: "https://about.gitlab.com/blog/gitlab-act-2/",
+      summary: "2026年6月2日，新任CEO Bill Staples 推出「Act 2」全面重组：裁减约350人（14%），将管理层级从8层压缩、部分职能砍掉3层，把研发重组为约60个端到端自主小团队（数量近乎翻倍），并用AI Agent自动化内部的评审、审批与交接流程。核心信条：「我们正在构建一个由机器编写软件、由人类引导的世界。」这是一个可直接对标的组织扁平化 + Agentic重构样本。",
+      key_insights: [
+        { zh: "组织从8层压扁、部分职能砍掉3层管理——目标是「让领导者更贴近一线工作」；这与OKG产研中心的层级精简方向高度一致，提供了一个可量化对标的层级压缩案例", en: "Flattened from 8 layers, removing up to 3 management layers in some functions to bring 'leaders closer to the work' — a quantifiable delayering benchmark" },
+        { zh: "研发重组为约60个端到端自主小团队（独立团队数量近乎翻倍）——「小团队+端到端Ownership」是Agentic时代的组织单元设计，单元变小、授权变大、AI Agent补足执行带宽", en: "R&D re-organized into ~60 smaller empowered teams with end-to-end ownership (nearly doubling independent teams) — small-team + full ownership is the org unit design for the agentic era" },
+        { zh: "先用AI Agent改造内部流程（评审/审批/交接自动化），再据此「right-size」岗位——顺序是「流程Agent化在前、编制调整在后」，而非先裁员再补工具，这是值得借鉴的变革排序", en: "Rewired internal processes with AI agents FIRST (automating reviews/approvals/handoffs), then right-sized roles to follow — process-agentification precedes headcount change, a transformation sequencing worth emulating" }
+      ]
+    },
+    {
+      id: "pwc-no-more-pyramids-agentic-2026",
+      title: "PwC: 'No More Pyramids' — Redesigning the Workforce from Pyramid to Diamond & Hourglass for the Agentic Era",
+      source: "PwC",
+      date: "2026-06",
+      category: "org-impact",
+      lang: "en",
+      url: "https://www.pwc.com/us/en/tech-effect/ai-analytics/agentic-ai-workforce-redesign.html",
+      summary: "PwC 提出：传统「金字塔」组织（大量初级执行层 + 收窄的管理层）正在被AI Agent瓦解，因为底层执行任务正被代理接管。取而代之的是两种新结构——「钻石型」（中间高价值Orchestrator层最厚，用于规模化管理AI Agent）和PwC自身在内部采用的「沙漏型」（初级岗位通过AI快速放大贡献而非被砍）。核心趋势是「通才的崛起」：一名资深工程师可编排多个AI Agent团队，从窄执行转向跨流程的宽责任。",
+      key_insights: [
+        { zh: "金字塔结构被瓦解的根因：金字塔依赖庞大初级执行层，而这一层正是AI Agent最先接管的部分——组织设计的底层假设（靠人力金字塔逐级支撑）正在失效", en: "The pyramid is collapsing because it relies on a large junior execution layer — exactly what agents take over first; the foundational assumption of org design is breaking" },
+        { zh: "两种替代结构：①「钻石型」——中间Orchestrator层最厚，人负责编排和监督规模化的AI Agent；②「沙漏型」（PwC内部采用）——初级岗位不被砍，而是借AI快速放大产出、跨工作流贡献", en: "Two replacements: diamond (thick middle orchestrator layer managing agents at scale) and hourglass (PwC's own — entry roles amplified by AI rather than cut)" },
+        { zh: "「通才的崛起」是组织能力的范式转移：岗位从「窄而深的单一执行」转向「宽而跨流程的成果负责」，对HR的岗位族、能力模型、职级体系设计提出根本性重构要求", en: "'Rise of the generalist' is a capability paradigm shift — roles move from narrow-deep execution to broad cross-process ownership, forcing fundamental redesign of job families, competency models and leveling" }
+      ]
+    },
+    {
+      id: "deloitte-agentic-reality-check-silicon-workforce-2026",
+      title: "Deloitte Tech Trends 2026: 'The Agentic Reality Check' — Preparing for a Silicon-Based Workforce",
+      source: "Deloitte",
+      date: "2026-06",
+      category: "hr-transform",
+      lang: "en",
+      url: "https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends/2026/agentic-ai-strategy.html",
+      summary: "Deloitte 2026技术趋势提出「硅基劳动力（Silicon-Based Workforce）」概念：AI Agent正成为需要被「管理」的新型数字员工——需要被招募（选型）、入职（接入数据与权限）、绩效评估、治理与下线。但现实检验是：仅约1/5的企业建立了成熟的自主AI Agent治理模型。HR的角色边界正在扩展到「同时管理人类员工与数字员工」的混合劳动力管理。",
+      key_insights: [
+        { zh: "「硅基劳动力」框架把AI Agent类比为数字员工——需要招募/入职/绩效/治理/下线全生命周期管理，这意味着HR的管理对象首次从「仅人类」扩展到「人+Agent」的混合编制", en: "The 'silicon-based workforce' frame treats agents as digital employees needing full lifecycle management (recruit/onboard/perform/govern/offboard) — HR's scope expands from people-only to a human+agent hybrid workforce" },
+        { zh: "现实检验：仅约20%的企业建立了成熟的自主AI Agent治理模型——绝大多数企业在「部署Agent」上狂奔，却在「管理Agent」上严重滞后，治理缺口是当前最大风险", en: "Reality check: only ~1 in 5 firms has a mature governance model for autonomous agents — most race to deploy but lag badly on managing them; the governance gap is the top risk" },
+        { zh: "对HR/OD的直接启示：需要前瞻设计「混合劳动力规划」——包括Agent的权限边界、人机协作的责任划分、以及当Agent承担更多任务时人类岗位的价值重定位", en: "Direct implication for HR/OD: design hybrid workforce planning ahead — agent permission boundaries, human-agent accountability splits, and repositioning human roles as agents absorb more tasks" }
+      ]
+    },
     {
       id: "accenture-ai-layoffs-agentic-training-2026",
       title: "Accenture Cuts 11,000 While Training 70,000 in Agentic AI — 'Reskilling Is Not Viable for Some Roles'",
